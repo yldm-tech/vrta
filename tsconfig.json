@@ -31,8 +31,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.jsx"
+    "src/**/*.d.ts"
   ]
 }
