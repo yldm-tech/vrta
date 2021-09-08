@@ -8,7 +8,8 @@ import { varWrapEnter } from '@/components/animate/variants';
 interface Props{
 	open:boolean,
 	children?:JSX.Element,
-	other?
+	other?,
+	initial?
 }
 
 const  MotionContainer= (props:Props):JSX.Element =>{

@@ -7,8 +7,7 @@ import Page from '@/components/Page';
 import { MHidden } from '@/components/@material-extend';
 import { LoginForm } from '@/components/authentication/login';
 import AuthSocial from '@/components/authentication/AuthSocial';
-
-// ----------------------------------------------------------------------
+import IllustrationLoginImage from '@/assets/images/illustrations/illustration_login.png';
 
 const RootStyle = styled(Page)(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
@@ -51,7 +50,7 @@ export default function Login():JSX.Element {
 					<Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Hi, Welcome Back
 					</Typography>
-					<img src="/src/assets/images/illustrations/illustration_login.png" alt="login" />
+					<img src={IllustrationLoginImage} alt="login" />
 				</SectionStyle>
 			</MHidden>
 

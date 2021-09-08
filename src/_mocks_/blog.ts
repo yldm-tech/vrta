@@ -30,6 +30,7 @@ const POST_TITLES = [
 	'How to Animate a SVG with border-image'
 ];
 
+const baseUrl = '/src/assets/images/mock-images';
 const posts:IPost[] = [...Array(23)].map((_, index) => ({
 	id: faker.datatype.uuid(),
 	cover: mockImgCover(index + 1),
@@ -41,7 +42,7 @@ const posts:IPost[] = [...Array(23)].map((_, index) => ({
 	favorite: faker.datatype.number(),
 	author: {
 		name: faker.name.findName(),
-		avatarUrl: `/src/assets/images/mock-images/avatars/avatar_${index + 1}.jpg`
+		avatarUrl: `${baseUrl}/avatars/avatar_${index + 1}.jpg`
 	}
 }));
 

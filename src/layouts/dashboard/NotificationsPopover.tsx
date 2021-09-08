@@ -28,6 +28,12 @@ import { mockImgAvatar } from '@/utils/mockImages';
 import Scrollbar from '@/components/Scrollbar';
 import MenuPopover from '@/components/MenuPopover';
 
+
+import icNotificationMail from '@/assets/images/icons/ic_notification_mail.svg';
+import icNotificationChat from '@/assets/images/icons/ic_notification_chat.svg';
+import icNotificationPackage from '@/assets/images/icons/ic_notification_package.svg';
+import icNotificationShipping from '@/assets/images/icons/ic_notification_shipping.svg';
+
 const NOTIFICATIONS = [
 	{
 		id: faker.datatype.uuid(),
@@ -88,25 +94,25 @@ function renderContent(notification) {
 
 	if (notification.type === 'order_placed') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_package.svg" />,
+			avatar: <img alt={notification.title} src={icNotificationPackage}/>,
 			title
 		};
 	}
 	if (notification.type === 'order_shipped') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_shipping.svg" />,
+			avatar: <img alt={notification.title} src={icNotificationShipping} />,
 			title
 		};
 	}
 	if (notification.type === 'mail') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_mail.svg" />,
+			avatar: <img alt={notification.title} src={icNotificationMail}/>,
 			title
 		};
 	}
 	if (notification.type === 'chat_message') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_chat.svg" />,
+			avatar: <img alt={notification.title} src={icNotificationChat} />,
 			title
 		};
 	}

@@ -8,6 +8,8 @@ import { MHidden } from '@/components/@material-extend';
 import { RegisterForm } from '@/components/authentication/register';
 import AuthSocial from '@/components/authentication/AuthSocial';
 
+import IllustrationRegisterImage from '@/assets/images/illustrations/illustration_register.png';
+
 const RootStyle = styled(Page)(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
 		display: 'flex'
@@ -33,7 +35,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
 	padding: theme.spacing(12, 0)
 }));
 
-// ----------------------------------------------------------------------
 
 export default function Register() :JSX.Element{
 	return (
@@ -50,7 +51,7 @@ export default function Register() :JSX.Element{
 					<Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Manage the job more effectively with Minimal
 					</Typography>
-					<img alt="register" src="/src/assets/images/illustrations/illustration_register.png" />
+					<img alt="register" src={IllustrationRegisterImage} />
 				</SectionStyle>
 			</MHidden>
 

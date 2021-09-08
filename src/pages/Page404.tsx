@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
-// material
+
 import { styled } from '@material-ui/core/styles';
 import { Box, Button, Typography, Container } from '@material-ui/core';
-// components
+
 import { MotionContainer, varBounceIn } from '@/components/animate';
 import Page from '@/components/Page';
 
-// ----------------------------------------------------------------------
+import Illustration404Image from '@/assets/images/illustrations/illustration_404.svg';
 
 const RootStyle = styled(Page)(({ theme }) => ({
 	display: 'flex',
@@ -17,8 +17,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
 	paddingTop: theme.spacing(15),
 	paddingBottom: theme.spacing(10)
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Page404():JSX.Element {
 	return (
@@ -39,7 +37,7 @@ export default function Page404():JSX.Element {
 						<motion.div variants={varBounceIn}>
 							<Box
 								component="img"
-								src="/src/assets/images/illustrations/illustration_404.svg"
+								src={Illustration404Image}
 								sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
 							/>
 						</motion.div>

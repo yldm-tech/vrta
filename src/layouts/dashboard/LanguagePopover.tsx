@@ -1,31 +1,29 @@
 import React, { useRef, useState } from 'react';
-// material
 import { alpha } from '@material-ui/core/styles';
 import { Box, MenuItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core';
-// components
 import MenuPopover from '@/components/MenuPopover';
 
-// ----------------------------------------------------------------------
+import flagEn from '@/assets/images/icons/ic_flag_en.svg';
+import flagDe from '@/assets/images/icons/ic_flag_de.svg';
+import flagFr from '@/assets/images/icons/ic_flag_fr.svg';
 
 const LANGS = [
 	{
 		value: 'en',
 		label: 'English',
-		icon: '/src/assets/images/icons/ic_flag_en.svg'
+		icon: flagEn
 	},
 	{
 		value: 'de',
 		label: 'German',
-		icon: '/src/assets/images/icons/ic_flag_de.svg'
+		icon: flagDe
 	},
 	{
 		value: 'fr',
 		label: 'French',
-		icon: '/src/assets/images/icons/ic_flag_fr.svg'
+		icon: flagFr
 	}
 ];
-
-// ----------------------------------------------------------------------
 
 export default function LanguagePopover():JSX.Element {
 	const anchorRef = useRef(null);

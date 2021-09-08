@@ -11,7 +11,7 @@ import { fShortenNumber } from '@/utils/formatNumber';
 import SvgIconStyle from '../../SvgIconStyle';
 import { IPost } from '@/models';
 
-// ----------------------------------------------------------------------
+import ShapeAvatar from '@/assets/images/icons/shape-avatar.svg';
 
 const CardMediaStyle = styled('div')({
 	position: 'relative',
@@ -96,7 +96,7 @@ const  BlogPostCard = (props:Props):JSX.Element=> {
 				>
 					<SvgIconStyle
 						color="paper"
-						src="/src/assets/images/icons/shape-avatar.svg"
+						src={ShapeAvatar}
 						sx={{
 							width: 80,
 							height: 36,

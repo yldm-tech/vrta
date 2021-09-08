@@ -10,6 +10,8 @@ import { MHidden } from '@/components/@material-extend';
 import sidebarConfig from './SidebarConfig';
 import account from '@/_mocks_/account';
 
+import illustrationAvatar from '@/assets/images/illustrations/illustration_avatar.png';
+
 
 const DRAWER_WIDTH = 280;
 
@@ -93,7 +95,7 @@ export default function DashboardSidebar(props:Props):JSX.Element {
 				>
 					<Box
 						component="img"
-						src="/src/assets/images/illustrations/illustration_avatar.png"
+						src={illustrationAvatar}
 						sx={{ width: 100, position: 'absolute', top: -50 }}
 					/>
 
