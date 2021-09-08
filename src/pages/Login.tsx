@@ -1,4 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
+import React from 'react';
 // material
 import { styled } from '@material-ui/core/styles';
 import { Card, Stack, Link, Container, Typography } from '@material-ui/core';
@@ -41,7 +42,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function Login() {
 	return (
-		<RootStyle title="Login | Minimal-UI">
+		<RootStyle>
 			<AuthLayout>
         Don’t have an account? &nbsp;
 				<Link underline="none" variant="subtitle2" component={RouterLink} to="/register">
@@ -54,7 +55,7 @@ export default function Login() {
 					<Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Hi, Welcome Back
 					</Typography>
-					<img src="/static/illustrations/illustration_login.png" alt="login" />
+					<img src="/src/assets/static/illustrations/illustration_login.png" alt="login" />
 				</SectionStyle>
 			</MHidden>
 

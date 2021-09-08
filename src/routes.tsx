@@ -1,5 +1,5 @@
 import { Navigate, useRoutes } from 'react-router-dom';
-import React from 'react';
+import React, { ReactElement } from 'react';
 // layouts
 import DashboardLayout from '@/layouts/dashboard';
 import LogoOnlyLayout from '@/layouts/LogoOnlyLayout';
@@ -14,7 +14,7 @@ import NotFound from '@/pages/Page404';
 
 // ----------------------------------------------------------------------
 
-export default function Router() {
+export default function Router():ReactElement {
 	return useRoutes([
 		{
 			path: '/dashboard',
@@ -39,6 +39,6 @@ export default function Router() {
 			]
 		},
 
-		// { path: '*', element: <Navigate to="/404" replace /> }
-	]);
+		{ path: '*', element: <Navigate to="/404" replace /> }
+	]) as React.ReactElement;
 }

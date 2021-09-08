@@ -26,7 +26,7 @@ import {
 	ListItemButton
 } from '@material-ui/core';
 // utils
-import { mockImgAvatar } from '../../utils/mockImages';
+import { mockImgAvatar } from '@/utils/mockImages';
 // components
 import Scrollbar from '@/components/Scrollbar';
 import MenuPopover from '@/components/MenuPopover';
@@ -93,25 +93,25 @@ function renderContent(notification) {
 
 	if (notification.type === 'order_placed') {
 		return {
-			avatar: <img alt={notification.title} src="/static/icons/ic_notification_package.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_package.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'order_shipped') {
 		return {
-			avatar: <img alt={notification.title} src="/static/icons/ic_notification_shipping.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_shipping.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'mail') {
 		return {
-			avatar: <img alt={notification.title} src="/static/icons/ic_notification_mail.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_mail.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'chat_message') {
 		return {
-			avatar: <img alt={notification.title} src="/static/icons/ic_notification_chat.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_chat.svg" />,
 			title
 		};
 	}
@@ -170,7 +170,7 @@ export default function NotificationsPopover() {
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 	const [notifications, setNotifications] = useState(NOTIFICATIONS);
-	const totalUnRead = notifications.filter((item) => item.isUnRead === true).length;
+	const totalUnRead = notifications.filter((item) => item.isUnRead).length;
 
 	const handleOpen = () => {
 		setOpen(true);

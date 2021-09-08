@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 // material
 import { Box } from '@material-ui/core';
 

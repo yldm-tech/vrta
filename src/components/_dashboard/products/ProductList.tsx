@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 // material
 import { Grid } from '@material-ui/core';
 import ShopProductCard from '@/components/_dashboard/products/ProductCard';

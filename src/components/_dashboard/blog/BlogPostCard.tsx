@@ -9,8 +9,8 @@ import messageCircleFill from '@iconify/icons-eva/message-circle-fill';
 import { alpha, styled } from '@material-ui/core/styles';
 import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@material-ui/core';
 // utils
-import { fDate } from '../../../utils/formatTime';
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fDate } from '@/utils/formatTime';
+import { fShortenNumber } from '@/utils/formatNumber';
 //
 import SvgIconStyle from '../../SvgIconStyle';
 

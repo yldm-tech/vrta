@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import { useState } from 'react';
+import React, { useState } from 'react';
 // material
 import { Container, Stack, Typography } from '@material-ui/core';
 // components
@@ -47,20 +47,20 @@ export default function EcommerceShop() {
 	};
 
 	return (
-		<Page title="Dashboard: Products | Minimal-UI">
+		<Page title='Dashboard: Products | Minimal-UI'>
 			<Container>
-				<Typography variant="h4" sx={{ mb: 5 }}>
+				<Typography variant='h4' sx={{ mb: 5 }}>
           Products
 				</Typography>
 
 				<Stack
-					direction="row"
-					flexWrap="wrap-reverse"
-					alignItems="center"
-					justifyContent="flex-end"
+					direction='row'
+					flexWrap='wrap-reverse'
+					alignItems='center'
+					justifyContent='flex-end'
 					sx={{ mb: 5 }}
 				>
-					<Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
+					<Stack direction='row' spacing={1} flexShrink={0} sx={{ my: 1 }}>
 						<ProductFilterSidebar
 							formik={formik}
 							isOpenFilter={openFilter}
