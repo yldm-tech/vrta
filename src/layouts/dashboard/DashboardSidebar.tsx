@@ -2,16 +2,13 @@
 import React,{ useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@material-ui/core';
+import { Box, Link, Drawer, Typography, Avatar} from '@material-ui/core';
 import Logo from '@/components/Logo';
 import Scrollbar from '@/components/Scrollbar';
 import NavSection from '@/components/NavSection';
 import { MHidden } from '@/components/@material-extend';
 import sidebarConfig from './SidebarConfig';
 import account from '@/_mocks_/account';
-
-import illustrationAvatar from '@/assets/images/illustrations/illustration_avatar.png';
-
 
 const DRAWER_WIDTH = 280;
 
@@ -29,8 +26,6 @@ const AccountStyle = styled('div')(({ theme }) => ({
 	// borderRadius: theme.shape.borderRadiusSm,
 	backgroundColor: theme.palette.grey[200]
 }));
-
-// ----------------------------------------------------------------------
 
 
 interface Props{
@@ -80,44 +75,6 @@ const DashboardSidebar = (props:Props):JSX.Element =>{
 			<NavSection navConfig={sidebarConfig} />
 
 			<Box sx={{ flexGrow: 1 }} />
-
-			<Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
-				<Stack
-					alignItems="center"
-					spacing={3}
-					sx={{
-						p: 2.5,
-						pt: 5,
-						borderRadius: 2,
-						position: 'relative',
-						bgcolor: 'grey.200'
-					}}
-				>
-					<Box
-						component="img"
-						src={illustrationAvatar}
-						sx={{ width: 100, position: 'absolute', top: -50 }}
-					/>
-
-					<Box sx={{ textAlign: 'center' }}>
-						<Typography gutterBottom variant="h6">
-              Get more?
-						</Typography>
-						<Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              From only $69
-						</Typography>
-					</Box>
-
-					<Button
-						fullWidth
-						href="https://material-ui.com/store/items/minimal-dashboard/"
-						target="_blank"
-						variant="contained"
-					>
-            Upgrade to Pro
-					</Button>
-				</Stack>
-			</Box>
 		</Scrollbar>
 	);
 
