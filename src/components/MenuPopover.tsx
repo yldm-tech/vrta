@@ -9,7 +9,6 @@ const ArrowStyle = styled('span')(({ theme }) => ({
         width: 12,
         right: 20,
         height: 12,
-        content: "''",
         position: 'absolute',
         borderRadius: '0 0 4px 0',
         transform: 'rotate(-135deg)',

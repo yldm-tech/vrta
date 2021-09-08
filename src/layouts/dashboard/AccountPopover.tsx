@@ -50,7 +50,7 @@ const AccountPopover = (): JSX.Element => {
                     ...(open && {
                         '&:before': {
                             zIndex: 1,
-                            content: "''",
+
                             width: '100%',
                             height: '100%',
                             borderRadius: '50%',

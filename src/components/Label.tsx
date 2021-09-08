@@ -1,6 +1,5 @@
 import React from 'react';
 import { alpha, styled } from '@material-ui/core/styles';
-import PropTypes, { ReactNodeLike } from 'prop-types';
 
 const RootStyle = styled('span')(({ theme, styleProps }) => {
     const { color, variant } = styleProps;
@@ -61,7 +60,7 @@ const RootStyle = styled('span')(({ theme, styleProps }) => {
 interface Props {
     color?: 'default' | 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
     variant?: 'filled' | 'outlined' | 'ghost';
-    children?: ReactNodeLike;
+    children?: JSX.Element;
     other?;
     sx?;
 }

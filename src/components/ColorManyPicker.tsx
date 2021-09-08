@@ -72,7 +72,6 @@ const ColorManyPicker = (props: Props): JSX.Element => {
                                     '&:before': {
                                         opacity: 0.48,
                                         width: '100%',
-                                        content: "''",
                                         height: '100%',
                                         borderRadius: '50%',
                                         position: 'absolute',

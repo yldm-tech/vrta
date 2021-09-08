@@ -50,8 +50,6 @@ const CoverImgStyle = styled('img')({
     position: 'absolute'
 });
 
-// ----------------------------------------------------------------------
-
 interface Props {
     post: IPost;
     index: number;
@@ -78,7 +76,6 @@ const BlogPostCard = (props: Props): JSX.Element => {
                             pt: 'calc(100% * 4 / 3)',
                             '&:after': {
                                 top: 0,
-                                content: "''",
                                 width: '100%',
                                 height: '100%',
                                 position: 'absolute',

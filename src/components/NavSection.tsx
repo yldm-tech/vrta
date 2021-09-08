@@ -21,7 +21,6 @@ const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props
             right: 0,
             width: 3,
             bottom: 0,
-            content: "''",
             display: 'none',
             position: 'absolute',
             borderTopLeftRadius: 4,
