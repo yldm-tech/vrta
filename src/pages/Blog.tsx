@@ -5,10 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Grid, Button, Container, Stack, Typography } from '@material-ui/core';
 import Page from '@/components/Page';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '@/components/_dashboard/blog';
-//
 import POSTS from '@/_mocks_/blog';
-
-// ----------------------------------------------------------------------
 
 const SORT_OPTIONS = [
 	{ value: 'latest', label: 'Latest' },
@@ -18,7 +15,7 @@ const SORT_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-export default function Blog():JSX.Element {
+const Blog = ():JSX.Element =>{
 	return (
 		<Page title="Dashboard: Blog | Minimal-UI">
 			<Container>
@@ -49,4 +46,6 @@ export default function Blog():JSX.Element {
 			</Container>
 		</Page>
 	);
-}
+};
+
+export default Blog;

@@ -9,7 +9,7 @@ import { ApexOptions } from 'apexcharts';
 
 const CHART_DATA = [{ data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380] }];
 
-export default function AppConversionRates():JSX.Element {
+const AppConversionRates = ():JSX.Element=> {
 	const chartOptions:ApexOptions = merge(BaseOptionChart(), {
 		tooltip: {
 			marker: { show: false },
@@ -47,4 +47,6 @@ export default function AppConversionRates():JSX.Element {
 			</Box>
 		</Card>
 	);
-}
+};
+
+export default AppConversionRates;

@@ -155,7 +155,7 @@ interface Props{
 	other?
 }
 
-export default function NavSection(props:Props):JSX.Element {
+const NavSection = (props:Props):JSX.Element=> {
 	const { navConfig, ...other } = props;
 	const { pathname } = useLocation();
 	const match = (path) => (path ? !!matchPath({ path, end: false }, pathname) : false);
@@ -169,4 +169,6 @@ export default function NavSection(props:Props):JSX.Element {
 			</List>
 		</Box>
 	);
-}
+};
+
+export default NavSection;

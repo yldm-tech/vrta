@@ -8,7 +8,7 @@ interface SearchNotFoundProps{
 }
 
 
-export default function SearchNotFound(props:SearchNotFoundProps):JSX.Element {
+const SearchNotFound = (props:SearchNotFoundProps):JSX.Element => {
 	const { searchQuery = '', ...other } = props;
 	return (
 		<Paper {...other}>
@@ -21,4 +21,6 @@ export default function SearchNotFound(props:SearchNotFoundProps):JSX.Element {
 			</Typography>
 		</Paper>
 	);
-}
+};
+
+export default SearchNotFound;

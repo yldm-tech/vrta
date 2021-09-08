@@ -35,7 +35,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 
-export default function Login():JSX.Element {
+const Login = ():JSX.Element =>{
 	return (
 		<RootStyle>
 			<AuthLayout>
@@ -78,4 +78,6 @@ export default function Login():JSX.Element {
 			</Container>
 		</RootStyle>
 	);
-}
+};
+
+export default Login;

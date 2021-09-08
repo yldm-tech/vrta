@@ -1,8 +1,7 @@
-// ----------------------------------------------------------------------
 
 import { Theme } from '@material-ui/core';
 
-export default function Tooltip(theme:Theme) {
+const Tooltip= (theme:Theme)=> {
 	return {
 		MuiTooltip: {
 			styleOverrides: {
@@ -15,4 +14,6 @@ export default function Tooltip(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+export default Tooltip;

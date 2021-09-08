@@ -45,7 +45,7 @@ interface Props{
 }
 
 
-export default function ColorManyPicker(props:Props):JSX.Element {
+const ColorManyPicker = (props:Props):JSX.Element =>{
 	const { colors, onChecked, sx, ...other } = props;
 	return (
 		<Box sx={sx}>
@@ -100,4 +100,6 @@ export default function ColorManyPicker(props:Props):JSX.Element {
 			})}
 		</Box>
 	);
-}
+};
+
+export default ColorManyPicker;

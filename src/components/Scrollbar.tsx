@@ -39,7 +39,7 @@ interface Props{
 	other?
 }
 
-export default function Scrollbar(props:Props):JSX.Element {
+const Scrollbar = (props:Props):JSX.Element=> {
 	const {children, sx,other} = props;
 	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 		navigator.userAgent
@@ -60,4 +60,6 @@ export default function Scrollbar(props:Props):JSX.Element {
 			</SimpleBarStyle>
 		</RootStyle>
 	);
-}
+};
+
+export default Scrollbar;

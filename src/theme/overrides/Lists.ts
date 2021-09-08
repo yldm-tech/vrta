@@ -2,7 +2,7 @@
 
 import { Theme } from '@material-ui/core';
 
-export default function Lists(theme:Theme) {
+const Lists = (theme:Theme) =>{
 	return {
 		MuiListItemIcon: {
 			styleOverrides: {
@@ -34,4 +34,6 @@ export default function Lists(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+export default Lists;

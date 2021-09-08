@@ -32,7 +32,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 1723315;
 
-export default function AppItemOrders() :JSX.Element{
+const AppItemOrders = () :JSX.Element=>{
 	return (
 		<RootStyle>
 			<IconWrapperStyle>
@@ -44,4 +44,6 @@ export default function AppItemOrders() :JSX.Element{
 			</Typography>
 		</RootStyle>
 	);
-}
+};
+
+export default AppItemOrders;

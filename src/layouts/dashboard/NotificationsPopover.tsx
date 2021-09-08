@@ -171,7 +171,7 @@ const NotificationItem= (props:Props):JSX.Element =>{
 	);
 };
 
-export default function NotificationsPopover() :JSX.Element{
+const NotificationsPopover = () :JSX.Element=>{
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 	const [notifications, setNotifications] = useState(NOTIFICATIONS);
@@ -275,4 +275,6 @@ export default function NotificationsPopover() :JSX.Element{
 			</MenuPopover>
 		</>
 	);
-}
+};
+
+export default NotificationsPopover;

@@ -9,7 +9,7 @@ interface Props{
 	sx
 }
 
-export default function SvgIconStyle(props:Props) :JSX.Element{
+const SvgIconStyle=(props:Props) :JSX.Element=>{
 	const { src, color = 'inherit', sx } = props;
 	return (
 		<Box
@@ -28,4 +28,7 @@ export default function SvgIconStyle(props:Props) :JSX.Element{
 			}}
 		/>
 	);
-}
+};
+
+
+export default SvgIconStyle;

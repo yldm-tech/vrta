@@ -25,7 +25,7 @@ const LANGS = [
 	}
 ];
 
-export default function LanguagePopover():JSX.Element {
+const LanguagePopover = ():JSX.Element=> {
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 
@@ -75,4 +75,6 @@ export default function LanguagePopover():JSX.Element {
 			</MenuPopover>
 		</>
 	);
-}
+};
+
+export default LanguagePopover;

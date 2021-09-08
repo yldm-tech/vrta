@@ -28,7 +28,7 @@ interface Props{
 	anchorEl?
 }
 
-export default function MenuPopover( props:Props ) :JSX.Element{
+const MenuPopover = ( props:Props ) :JSX.Element=>{
 	const {open,children, ...other} = props;
 	return (
 		<Popover
@@ -50,4 +50,6 @@ export default function MenuPopover( props:Props ) :JSX.Element{
 			{children}
 		</Popover>
 	);
-}
+};
+
+export default MenuPopover;

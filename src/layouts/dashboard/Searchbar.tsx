@@ -35,9 +35,7 @@ const SearchbarStyle = styled('div')(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
-
-export default function Searchbar():JSX.Element {
+const Searchbar = ():JSX.Element =>{
 	const [isOpen, setOpen] = useState(false);
 
 	const handleOpen = () => {
@@ -83,4 +81,6 @@ export default function Searchbar():JSX.Element {
 			</div>
 		</ClickAwayListener>
 	);
-}
+};
+
+export default Searchbar;

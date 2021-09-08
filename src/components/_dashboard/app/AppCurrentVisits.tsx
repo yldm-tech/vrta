@@ -31,7 +31,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 const CHART_DATA = [4344, 5435, 1443, 4443];
 
-export default function AppCurrentVisits():JSX.Element {
+const AppCurrentVisits = ():JSX.Element =>{
 	const theme = useTheme();
 
 	const chartOptions:ApexOptions = merge(BaseOptionChart(), {
@@ -67,4 +67,7 @@ export default function AppCurrentVisits():JSX.Element {
 			</ChartWrapperStyle>
 		</Card>
 	);
-}
+};
+
+
+export default AppCurrentVisits;

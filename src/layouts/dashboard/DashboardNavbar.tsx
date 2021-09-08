@@ -39,7 +39,7 @@ interface Props{
 	onOpenSidebar,
 }
 
-export default function DashboardNavbar(props:Props):JSX.Element {
+const DashboardNavbar = (props:Props):JSX.Element =>{
 	const { onOpenSidebar } = props;
 	return (
 		<RootStyle>
@@ -62,3 +62,5 @@ export default function DashboardNavbar(props:Props):JSX.Element {
 		</RootStyle>
 	);
 }
+
+export default DashboardNavbar;

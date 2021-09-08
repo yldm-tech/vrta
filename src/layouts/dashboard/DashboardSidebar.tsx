@@ -38,7 +38,7 @@ interface Props{
 	onCloseSidebar?
 }
 
-export default function DashboardSidebar(props:Props):JSX.Element {
+const DashboardSidebar = (props:Props):JSX.Element =>{
 	const { isOpenSidebar, onCloseSidebar } = props;
 	const { pathname } = useLocation();
 
@@ -151,4 +151,6 @@ export default function DashboardSidebar(props:Props):JSX.Element {
 			</MHidden>
 		</RootStyle>
 	);
-}
+};
+
+export default DashboardSidebar;

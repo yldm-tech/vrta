@@ -5,8 +5,6 @@ import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
 import { fShortenNumber } from '@/utils/formatNumber';
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled(Card)(({ theme }) => ({
 	boxShadow: 'none',
 	textAlign: 'center',
@@ -34,7 +32,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 1352831;
 
-export default function AppNewUsers():JSX.Element {
+const AppNewUsers=():JSX.Element =>{
 	return (
 		<RootStyle>
 			<IconWrapperStyle>
@@ -46,4 +44,6 @@ export default function AppNewUsers():JSX.Element {
 			</Typography>
 		</RootStyle>
 	);
-}
+};
+
+export default AppNewUsers

@@ -2,7 +2,7 @@
 
 import { Theme } from '@material-ui/core';
 
-export default function IconButton(theme:Theme) {
+const IconButton = (theme:Theme) =>{
 	return {
 		MuiIconButton: {
 			variants: [
@@ -25,4 +25,7 @@ export default function IconButton(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+
+export default IconButton;

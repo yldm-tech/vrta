@@ -16,7 +16,7 @@ import {
 	AppConversionRates
 } from '@/components/_dashboard/app';
 
-export default function DashboardApp():JSX.Element {
+const DashboardApp = ():JSX.Element =>{
 	return (
 		<Page title="Dashboard | Minimal-UI">
 			<Container maxWidth="xl">
@@ -72,4 +72,6 @@ export default function DashboardApp():JSX.Element {
 			</Container>
 		</Page>
 	);
-}
+};
+
+export default DashboardApp;

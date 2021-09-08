@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) =>
 	})
 );
 
-export default function BaseOptionChart() {
+const BaseOptionChart = () =>{
 	useStyles();
 	const theme = useTheme();
 
@@ -193,4 +193,7 @@ export default function BaseOptionChart() {
 			}
 		}
 	};
-}
+};
+
+
+export default BaseOptionChart;

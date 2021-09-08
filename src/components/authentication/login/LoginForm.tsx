@@ -18,7 +18,7 @@ import { LoadingButton } from '@material-ui/lab';
 
 // ----------------------------------------------------------------------
 
-export default function LoginForm():JSX.Element {
+const LoginForm = ():JSX.Element =>{
 	const navigate = useNavigate();
 	const [showPassword, setShowPassword] = useState(false);
 
@@ -102,4 +102,6 @@ export default function LoginForm():JSX.Element {
 			</Form>
 		</FormikProvider>
 	);
-}
+};
+
+export default LoginForm;

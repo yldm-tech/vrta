@@ -11,7 +11,7 @@ import {
 import PRODUCTS from '@/_mocks_/products';
 
 
-export default function EcommerceShop() :JSX.Element{
+const EcommerceShop= () :JSX.Element=>{
 	const [openFilter, setOpenFilter] = useState(false);
 
 	const formik = useFormik({
@@ -73,4 +73,7 @@ export default function EcommerceShop() :JSX.Element{
 			</Container>
 		</Page>
 	);
-}
+};
+
+
+export default EcommerceShop;

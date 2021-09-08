@@ -1,9 +1,6 @@
-// ----------------------------------------------------------------------
+import { Theme} from '@material-ui/core';
 
-import { Theme, ThemeOptions } from '@material-ui/core';
-import { ThemeOfStyles } from '@material-ui/styles';
-
-export default function Card(theme:Theme) {
+const Card = (theme:Theme)=> {
 	return {
 		MuiCard: {
 			styleOverrides: {
@@ -34,4 +31,6 @@ export default function Card(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+export default Card;

@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface IUser {
   id: string,
   avatarUrl: string,
@@ -18,7 +16,7 @@ export interface IPost {
   comment: number,
   share: number,
   favorite: number,
-  createdAt:string,
+  createdAt: string,
   author: {
     name: string,
     avatarUrl: string
@@ -45,16 +43,27 @@ export interface IProduct {
 export interface NavItemConfig {
   title: string,
   path: string,
-  icon:JSX.Element,
+  icon: JSX.Element,
   info?: string,
   children?
 }
 
 
-export interface News{
-  image, title, description, postedAt
+export interface News {
+  image,
+  title,
+  description,
+  postedAt
 }
 
-export interface Site{
-  icon,value,name
+export interface Site {
+  icon,
+  value,
+  name
+}
+
+export interface HeaderLabel {
+  id: string,
+  label: string,
+  alignRight: boolean,
 }

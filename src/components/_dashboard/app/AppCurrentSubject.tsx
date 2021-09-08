@@ -35,7 +35,7 @@ const CHART_DATA = [
 	{ name: 'Series 3', data: [44, 76, 78, 13, 43, 10] }
 ];
 
-export default function AppCurrentSubject() :JSX.Element{
+const AppCurrentSubject = () :JSX.Element =>{
 	const theme = useTheme();
 
 	const chartOptions : ApexOptions = merge(BaseOptionChart(), {
@@ -67,4 +67,6 @@ export default function AppCurrentSubject() :JSX.Element{
 			</ChartWrapperStyle>
 		</Card>
 	);
-}
+};
+
+export default AppCurrentSubject;

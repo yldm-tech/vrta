@@ -6,10 +6,10 @@ import ShopProductCard from '@/components/_dashboard/products/ProductCard';
 
 interface Props{
 	products,
-	order
+	order?
 }
 
-export default function ProductList(props:Props):JSX.Element {
+const ProductList = (props:Props):JSX.Element =>{
 	const { products, ...other } = props;
 	return (
 		<Grid container spacing={3} {...other}>
@@ -20,4 +20,6 @@ export default function ProductList(props:Props):JSX.Element {
 			))}
 		</Grid>
 	);
-}
+};
+
+export default ProductList;

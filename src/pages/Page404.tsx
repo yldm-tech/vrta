@@ -18,7 +18,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 	paddingBottom: theme.spacing(10)
 }));
 
-export default function Page404():JSX.Element {
+const Page404 = ():JSX.Element=> {
 	return (
 		<RootStyle>
 			<Container>
@@ -50,4 +50,7 @@ export default function Page404():JSX.Element {
 			</Container>
 		</RootStyle>
 	);
-}
+};
+
+
+export default Page404;

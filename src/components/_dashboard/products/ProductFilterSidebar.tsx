@@ -50,7 +50,7 @@ interface Props{
 	formik
 }
 
-export default function ShopFilterSidebar(props:Props) :JSX.Element{
+const ProductFilterSidebar = (props:Props) :JSX.Element =>{
 	const { onResetFilter } = props;
 	const { values, getFieldProps, handleChange } = props.formik;
 
@@ -209,4 +209,6 @@ export default function ShopFilterSidebar(props:Props) :JSX.Element{
 			</FormikProvider>
 		</>
 	);
-}
+};
+
+export default ProductFilterSidebar;

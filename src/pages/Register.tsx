@@ -36,7 +36,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 
-export default function Register() :JSX.Element{
+const Register= () :JSX.Element=>{
 	return (
 		<RootStyle>
 			<AuthLayout>
@@ -94,4 +94,6 @@ export default function Register() :JSX.Element{
 			</Container>
 		</RootStyle>
 	);
-}
+};
+
+export default Register;

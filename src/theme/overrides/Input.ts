@@ -2,7 +2,7 @@
 
 import { ThemeOptions } from '@material-ui/core';
 
-export default function Input(theme:ThemeOptions):any {
+const Input = (theme:ThemeOptions):any=> {
 	return {
 		MuiInputBase: {
 			styleOverrides: {
@@ -64,4 +64,6 @@ export default function Input(theme:ThemeOptions):any {
 			}
 		}
 	};
-}
+};
+
+export default Input;

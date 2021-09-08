@@ -2,7 +2,7 @@
 
 import { Theme } from '@material-ui/core';
 
-export default function Button(theme:Theme) {
+const Button = (theme:Theme) =>{
 	return {
 		MuiButton: {
 			styleOverrides: {
@@ -41,4 +41,6 @@ export default function Button(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+export default Button;

@@ -4,8 +4,6 @@ import chevronUpFill from '@iconify/icons-eva/chevron-up-fill';
 import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 import { Menu, Button, MenuItem, Typography } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
-
 const SORT_BY_OPTIONS = [
 	{ value: 'featured', label: 'Featured' },
 	{ value: 'newest', label: 'Newest' },
@@ -13,7 +11,7 @@ const SORT_BY_OPTIONS = [
 	{ value: 'priceAsc', label: 'Price: Low-High' }
 ];
 
-export default function ShopProductSort():JSX.Element {
+const ShopProductSort = ():JSX.Element =>{
 	const [open, setOpen] = useState(null);
 
 	const handleOpen = (event) => {
@@ -58,4 +56,6 @@ export default function ShopProductSort():JSX.Element {
 			</Menu>
 		</>
 	);
-}
+};
+
+export default ShopProductSort;

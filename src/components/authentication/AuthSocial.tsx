@@ -6,9 +6,7 @@ import facebookFill from '@iconify/icons-eva/facebook-fill';
 // material
 import { Stack, Button, Divider, Typography } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
-
-export default function AuthSocial() {
+const AuthSocial =()=> {
 	return (
 		<>
 			<Stack direction="row" spacing={2}>
@@ -32,4 +30,7 @@ export default function AuthSocial() {
 			</Divider>
 		</>
 	);
-}
+};
+
+
+export default AuthSocial;

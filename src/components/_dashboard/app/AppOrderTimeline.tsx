@@ -75,7 +75,7 @@ function OrderItem(props:Props) {
 	);
 }
 
-export default function AppOrderTimeline():JSX.Element {
+const AppOrderTimeline = ():JSX.Element=> {
 	return (
 		<Card
 			sx={{
@@ -94,4 +94,6 @@ export default function AppOrderTimeline():JSX.Element {
 			</CardContent>
 		</Card>
 	);
-}
+};
+
+export default AppOrderTimeline;

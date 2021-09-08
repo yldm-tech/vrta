@@ -15,9 +15,7 @@ const HeaderStyle = styled('header')(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
-
-export default function LogoOnlyLayout() :JSX.Element{
+const LogoOnlyLayout = () :JSX.Element=>{
 	return (
 		<>
 			<HeaderStyle>
@@ -28,4 +26,6 @@ export default function LogoOnlyLayout() :JSX.Element{
 			<Outlet />
 		</>
 	);
-}
+};
+
+export default LogoOnlyLayout;

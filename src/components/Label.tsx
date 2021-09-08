@@ -65,25 +65,13 @@ interface Props {
   other?
 }
 
-export default function Label(props: Props): JSX.Element {
+const Label = (props: Props): JSX.Element=> {
 	const { color = 'default', variant = 'ghost', children, ...other } = props;
 	return (
 		<RootStyle styleProps={{ color, variant }} {...other}>
 			{children}
 		</RootStyle>
 	);
-}
-
-Label.propTypes = {
-	children: PropTypes.node,
-	color: PropTypes.oneOf([
-		'default',
-		'primary',
-		'secondary',
-		'info',
-		'success',
-		'warning',
-		'error'
-	]),
-	variant: PropTypes.oneOf(['filled', 'outlined', 'ghost'])
 };
+
+export default Label;

@@ -1,6 +1,6 @@
 import { filter } from 'lodash';
 import { Icon } from '@iconify/react';
-import {IUser} from '@/models';
+import { HeaderLabel, IUser } from '@/models';
 import { sentenceCase } from 'change-case';
 import React,{ useState } from 'react';
 import plusFill from '@iconify/icons-eva/plus-fill';
@@ -27,13 +27,12 @@ import SearchNotFound from '@/components/SearchNotFound';
 import { UserListHead, UserListToolbar, UserMoreMenu } from '@/components/_dashboard/user';
 import USER_LIST from '@/_mocks_/user';
 
-const TABLE_HEAD = [
+const TABLE_HEAD:HeaderLabel[] = [
 	{ id: 'name', label: 'Name', alignRight: false },
 	{ id: 'company', label: 'Company', alignRight: false },
 	{ id: 'role', label: 'Role', alignRight: false },
 	{ id: 'isVerified', label: 'Verified', alignRight: false },
 	{ id: 'status', label: 'Status', alignRight: false },
-	{ id: '' }
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -65,7 +64,7 @@ function applySortFilter(array, comparator, query) {
 	return stabilizedThis.map((el) => el[0]);
 }
 
-export default function User():JSX.Element {
+const User = ():JSX.Element =>{
 	const [page, setPage] = useState(0);
 	const [order, setOrder] = useState('asc');
 	const [selected, setSelected] = useState<IUser[]>([]);
@@ -240,4 +239,6 @@ export default function User():JSX.Element {
 			</Container>
 		</Page>
 	);
-}
+};
+
+export default User;

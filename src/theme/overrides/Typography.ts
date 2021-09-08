@@ -1,8 +1,6 @@
-// ----------------------------------------------------------------------
-
 import { Theme } from '@material-ui/core';
 
-export default function Typography(theme:Theme) {
+const Typography = (theme:Theme) =>{
 	return {
 		MuiTypography: {
 			styleOverrides: {
@@ -15,4 +13,6 @@ export default function Typography(theme:Theme) {
 			}
 		}
 	};
-}
+};
+
+export default Typography;
