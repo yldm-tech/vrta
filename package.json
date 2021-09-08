@@ -6,11 +6,13 @@
   "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=local vite --host",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --ext .js,.jsx ./src",
-    "fix": "eslint --fix --ext .js,.jsx ./src"
+    "dev:stg": "cross-env NODE_ENV=stg vite",
+    "serve": "vite preview --host",
+    "build": "vite build",
+    "build:stg": "cross-env vite build --mode test",
+    "build:prod": "cross-env vite build --mode production",
+    "lint": "eslint --ext .jsx,.js,.ts,.tsx .",
+    "fix": "yarn lint --fix"
   },
   "browserslist": {
     "production": [

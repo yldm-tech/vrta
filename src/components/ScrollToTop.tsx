@@ -1,13 +1,13 @@
-import React,{ Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ScrollToTop = ():JSX.Element =>{
-	const { pathname } = useLocation();
+const ScrollToTop = (): JSX.Element => {
+    const { pathname } = useLocation();
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, [pathname]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
-	return <Fragment/>;
+    return <Fragment />;
 };
 export default ScrollToTop;

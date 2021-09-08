@@ -1,4 +1,3 @@
-// scroll bar
 import 'simplebar';
 
 import React from 'react';
@@ -9,22 +8,20 @@ import ThemeConfig from '@/theme';
 import ScrollToTop from '@/components/ScrollToTop';
 import Router from '@/routes';
 
-const App = ():JSX.Element =>{
-	return (
-		<ThemeConfig>
-			<ScrollToTop />
-			<Router />
-		</ThemeConfig>
-	);
+const App = (): JSX.Element => {
+    return (
+        <ThemeConfig>
+            <ScrollToTop />
+            <Router />
+        </ThemeConfig>
+    );
 };
 
-
 ReactDOM.render(
-	<HelmetProvider>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
-	</HelmetProvider>,
-	document.getElementById('root')
+    <HelmetProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </HelmetProvider>,
+    document.getElementById('root')
 );
-
