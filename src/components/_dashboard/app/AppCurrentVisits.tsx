@@ -1,15 +1,12 @@
 import React from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
-// material
 import { useTheme, styled } from '@material-ui/core/styles';
 import { Card, CardHeader } from '@material-ui/core';
-// utils
-import { fNumber } from '../../../utils/formatNumber';
-//
-import { BaseOptionChart } from '../../charts';
+import { fNumber } from '@/utils/formatNumber';
+import { BaseOptionChart } from '@/components/charts';
+import { ApexOptions } from 'apexcharts';
 
-// ----------------------------------------------------------------------
 
 const CHART_HEIGHT = 372;
 const LEGEND_HEIGHT = 72;
@@ -34,10 +31,10 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 const CHART_DATA = [4344, 5435, 1443, 4443];
 
-export default function AppCurrentVisits() {
+export default function AppCurrentVisits():JSX.Element {
 	const theme = useTheme();
 
-	const chartOptions = merge(BaseOptionChart(), {
+	const chartOptions:ApexOptions = merge(BaseOptionChart(), {
 		colors: [
 			theme.palette.primary.main,
 			theme.palette.info.main,

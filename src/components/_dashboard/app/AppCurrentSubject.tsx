@@ -1,13 +1,10 @@
 import React from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
-// material
 import { useTheme, styled } from '@material-ui/core/styles';
 import { Card, CardHeader } from '@material-ui/core';
-//
-import { BaseOptionChart } from '../../charts';
-
-// ----------------------------------------------------------------------
+import { BaseOptionChart } from '@/components/charts';
+import { ApexOptions } from 'apexcharts';
 
 const CHART_HEIGHT = 392;
 const LEGEND_HEIGHT = 72;
@@ -38,10 +35,10 @@ const CHART_DATA = [
 	{ name: 'Series 3', data: [44, 76, 78, 13, 43, 10] }
 ];
 
-export default function AppCurrentSubject() {
+export default function AppCurrentSubject() :JSX.Element{
 	const theme = useTheme();
 
-	const chartOptions = merge(BaseOptionChart(), {
+	const chartOptions : ApexOptions = merge(BaseOptionChart(), {
 		stroke: { width: 2 },
 		fill: { opacity: 0.48 },
 		legend: { floating: true, horizontalAlign: 'center' },

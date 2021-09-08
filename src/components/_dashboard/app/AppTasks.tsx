@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Form, FormikProvider, useFormik } from 'formik';
-// material
 import {
 	Box,
 	Card,
@@ -12,7 +11,6 @@ import {
 	Stack
 } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
 const TASKS = [
 	'Create FireStone Logo',
@@ -22,42 +20,42 @@ const TASKS = [
 	'Sprint Showcase'
 ];
 
-// ----------------------------------------------------------------------
 
-TaskItem.propTypes = {
-	task: PropTypes.string,
-	checked: PropTypes.bool,
-	formik: PropTypes.object
-};
+interface Props{
+	task,
+	checked,
+	formik,
+	other?
+}
 
-function TaskItem({ task, checked, formik, ...other }) {
-	const { getFieldProps } = formik;
+const TaskItem=(props: Props)=> {
+	const { getFieldProps } = props.formik;
 
 	return (
 		<Stack direction="row" justifyContent="space-between" sx={{ py: 0.75 }}>
 			<FormControlLabel
 				control={
-					<Checkbox {...getFieldProps('checked')} value={task} checked={checked} {...other} />
+					<Checkbox {...getFieldProps('checked')} value={props.task} checked={props.checked} {...props.other} />
 				}
 				label={
 					<Typography
 						variant="body2"
 						sx={{
-							...(checked && {
+							...(props.checked && {
 								color: 'text.disabled',
 								textDecoration: 'line-through'
 							})
 						}}
 					>
-						{task}
+						{props.task}
 					</Typography>
 				}
 			/>
 		</Stack>
 	);
-}
+};
 
-export default function AppTasks() {
+export const  AppTasks=():JSX.Element =>{
 	const formik = useFormik({
 		initialValues: {
 			checked: [TASKS[2]]
@@ -88,4 +86,6 @@ export default function AppTasks() {
 			</Box>
 		</Card>
 	);
-}
+};
+
+export default AppTasks;

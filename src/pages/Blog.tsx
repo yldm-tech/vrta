@@ -2,9 +2,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import plusFill from '@iconify/icons-eva/plus-fill';
 import { Link as RouterLink } from 'react-router-dom';
-// material
 import { Grid, Button, Container, Stack, Typography } from '@material-ui/core';
-// components
 import Page from '@/components/Page';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '@/components/_dashboard/blog';
 //
@@ -20,7 +18,7 @@ const SORT_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-export default function Blog() {
+export default function Blog():JSX.Element {
 	return (
 		<Page title="Dashboard: Blog | Minimal-UI">
 			<Container>

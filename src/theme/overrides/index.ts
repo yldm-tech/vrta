@@ -9,10 +9,11 @@ import Backdrop from '@/theme/overrides/Backdrop';
 import Typography from '@/theme/overrides/Typography';
 import IconButton from '@/theme/overrides/IconButton';
 import Autocomplete from '@/theme/overrides/Autocomplete';
+import { ThemeOptions } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
-export default function ComponentsOverrides(theme) {
+export default function ComponentsOverrides(theme:ThemeOptions) {
 	return merge(
 		Card(theme),
 		Lists(theme),

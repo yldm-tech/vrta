@@ -1,11 +1,8 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import shoppingCartFill from '@iconify/icons-eva/shopping-cart-fill';
-// material
 import { styled } from '@material-ui/core/styles';
 import { Badge } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
 	zIndex: 999,
@@ -28,9 +25,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 	'&:hover': { opacity: 0.72 }
 }));
 
-// ----------------------------------------------------------------------
-
-export default function CartWidget() {
+const CartWidget = () :JSX.Element=>{
 	return (
 		<RootStyle>
 			<Badge showZero badgeContent={0} color="error" max={99}>
@@ -38,4 +33,6 @@ export default function CartWidget() {
 			</Badge>
 		</RootStyle>
 	);
-}
+};
+
+export default CartWidget;

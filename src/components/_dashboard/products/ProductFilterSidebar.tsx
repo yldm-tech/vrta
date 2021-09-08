@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import { Icon } from '@iconify/react';
-import { Form, FormikProvider } from 'formik';
+import { Form, FormikProvider} from 'formik';
 import closeFill from '@iconify/icons-eva/close-fill';
 import roundClearAll from '@iconify/icons-ic/round-clear-all';
 import roundFilterList from '@iconify/icons-ic/round-filter-list';
-// material
 import {
 	Box,
 	Radio,
@@ -21,18 +20,9 @@ import {
 	RadioGroup,
 	FormControlLabel
 } from '@material-ui/core';
-//
 import Scrollbar from '../../Scrollbar';
 import ColorManyPicker from '../../ColorManyPicker';
 
-// ----------------------------------------------------------------------
-
-export const SORT_BY_OPTIONS = [
-	{ value: 'featured', label: 'Featured' },
-	{ value: 'newest', label: 'Newest' },
-	{ value: 'priceDesc', label: 'Price: High-Low' },
-	{ value: 'priceAsc', label: 'Price: Low-High' }
-];
 export const FILTER_GENDER_OPTIONS = ['Men', 'Women', 'Kids'];
 export const FILTER_CATEGORY_OPTIONS = ['All', 'Shose', 'Apparel', 'Accessories'];
 export const FILTER_RATING_OPTIONS = ['up4Star', 'up3Star', 'up2Star', 'up1Star'];
@@ -41,7 +31,7 @@ export const FILTER_PRICE_OPTIONS = [
 	{ value: 'between', label: 'Between $25 - $75' },
 	{ value: 'above', label: 'Above $75' }
 ];
-export const FILTER_COLOR_OPTIONS = [
+export const FILTER_COLOR_OPTIONS:string[] = [
 	'#00AB55',
 	'#000000',
 	'#FFFFFF',
@@ -52,24 +42,17 @@ export const FILTER_COLOR_OPTIONS = [
 	'#FFC107'
 ];
 
-// ----------------------------------------------------------------------
-
-ShopFilterSidebar.propTypes = {
-	isOpenFilter: PropTypes.bool,
-	onResetFilter: PropTypes.func,
-	onOpenFilter: PropTypes.func,
-	onCloseFilter: PropTypes.func,
-	formik: PropTypes.object
-};
-
-export default function ShopFilterSidebar({
-	isOpenFilter,
-	onResetFilter,
-	onOpenFilter,
-	onCloseFilter,
+interface Props{
+	isOpenFilter: boolean,
+	onResetFilter: ()=>void,
+	onOpenFilter: ()=>void,
+	onCloseFilter:()=>void,
 	formik
-}) {
-	const { values, getFieldProps, handleChange } = formik;
+}
+
+export default function ShopFilterSidebar(props:Props) :JSX.Element{
+	const { onResetFilter } = props;
+	const { values, getFieldProps, handleChange } = props.formik;
 
 	return (
 		<>
@@ -77,17 +60,17 @@ export default function ShopFilterSidebar({
 				disableRipple
 				color="inherit"
 				endIcon={<Icon icon={roundFilterList} />}
-				onClick={onOpenFilter}
+				onClick={props.onOpenFilter}
 			>
         Filters&nbsp;
 			</Button>
 
-			<FormikProvider value={formik}>
+			<FormikProvider value={props.formik}>
 				<Form autoComplete="off" noValidate>
 					<Drawer
 						anchor="right"
-						open={isOpenFilter}
-						onClose={onCloseFilter}
+						open={props.isOpenFilter}
+						onClose={props.onCloseFilter}
 						PaperProps={{
 							sx: { width: 280, border: 'none', overflow: 'hidden' }
 						}}
@@ -101,7 +84,7 @@ export default function ShopFilterSidebar({
 							<Typography variant="subtitle1" sx={{ ml: 1 }}>
                 Filters
 							</Typography>
-							<IconButton onClick={onCloseFilter}>
+							<IconButton onClick={props.onCloseFilter}>
 								<Icon icon={closeFill} width={20} height={20} />
 							</IconButton>
 						</Stack>

@@ -1,8 +1,6 @@
 import { useFormik } from 'formik';
 import React, { useState } from 'react';
-// material
 import { Container, Stack, Typography } from '@material-ui/core';
-// components
 import Page from '@/components/Page';
 import {
 	ProductSort,
@@ -10,12 +8,10 @@ import {
 	ProductCartWidget,
 	ProductFilterSidebar
 } from '@/components/_dashboard/products';
-//
 import PRODUCTS from '@/_mocks_/products';
 
-// ----------------------------------------------------------------------
 
-export default function EcommerceShop() {
+export default function EcommerceShop() :JSX.Element{
 	const [openFilter, setOpenFilter] = useState(false);
 
 	const formik = useFormik({

@@ -1,11 +1,9 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import androidFilled from '@iconify/icons-ant-design/android-filled';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
-// utils
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fShortenNumber } from '@/utils/formatNumber';
 
 // ----------------------------------------------------------------------
 
@@ -13,8 +11,8 @@ const RootStyle = styled(Card)(({ theme }) => ({
 	boxShadow: 'none',
 	textAlign: 'center',
 	padding: theme.spacing(5, 0),
-	color: theme.palette.primary.darker,
-	backgroundColor: theme.palette.primary.lighter
+	// color: theme.palette.primary.darker,
+	// backgroundColor: theme.palette.primary.lighter
 }));
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
@@ -37,7 +35,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 714000;
 
-export default function AppWeeklySales() {
+export const  AppWeeklySales = ():JSX.Element=> {
 	return (
 		<RootStyle>
 			<IconWrapperStyle>
@@ -49,4 +47,6 @@ export default function AppWeeklySales() {
 			</Typography>
 		</RootStyle>
 	);
-}
+};
+
+export default AppWeeklySales;

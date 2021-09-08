@@ -1,9 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
-
-// ----------------------------------------------------------------------
+import PropTypes, { ReactNodeLike } from 'prop-types';
 
 const RootStyle = styled('span')(({ theme, styleProps }) => {
 	const { color, variant } = styleProps;
@@ -61,9 +58,15 @@ const RootStyle = styled('span')(({ theme, styleProps }) => {
 	};
 });
 
-// ----------------------------------------------------------------------
+interface Props {
+  color?: 'default' | 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error',
+  variant?: 'filled' | 'outlined' | 'ghost',
+  children?: ReactNodeLike,
+  other?
+}
 
-export default function Label({ color = 'default', variant = 'ghost', children, ...other }) {
+export default function Label(props: Props): JSX.Element {
+	const { color = 'default', variant = 'ghost', children, ...other } = props;
 	return (
 		<RootStyle styleProps={{ color, variant }} {...other}>
 			{children}

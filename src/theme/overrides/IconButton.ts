@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------
 
-export default function IconButton(theme) {
+import { Theme } from '@material-ui/core';
+
+export default function IconButton(theme:Theme) {
 	return {
 		MuiIconButton: {
 			variants: [

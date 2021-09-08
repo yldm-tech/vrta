@@ -1,19 +1,16 @@
 import React from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
-// material
 import { Box, Card, CardHeader } from '@material-ui/core';
-// utils
-import { fNumber } from '../../../utils/formatNumber';
-//
-import { BaseOptionChart } from '../../charts';
+import { fNumber } from '@/utils/formatNumber';
+import { BaseOptionChart } from '@/components/charts';
+import { ApexOptions } from 'apexcharts';
 
-// ----------------------------------------------------------------------
 
 const CHART_DATA = [{ data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380] }];
 
-export default function AppConversionRates() {
-	const chartOptions = merge(BaseOptionChart(), {
+export default function AppConversionRates():JSX.Element {
+	const chartOptions:ApexOptions = merge(BaseOptionChart(), {
 		tooltip: {
 			marker: { show: false },
 			y: {

@@ -1,14 +1,15 @@
-import PropTypes from 'prop-types';
-// material
+
+import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
+interface SearchNotFoundProps{
+	searchQuery:string,
+	other?
+}
 
-SearchNotFound.propTypes = {
-	searchQuery: PropTypes.string
-};
 
-export default function SearchNotFound({ searchQuery = '', ...other }) {
+export default function SearchNotFound(props:SearchNotFoundProps):JSX.Element {
+	const { searchQuery = '', ...other } = props;
 	return (
 		<Paper {...other}>
 			<Typography gutterBottom align="center" variant="subtitle1">

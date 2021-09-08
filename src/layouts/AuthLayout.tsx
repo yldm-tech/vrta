@@ -1,15 +1,10 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-// material
 import { styled } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-// components
 import Logo from '@/components/Logo';
-//
 import { MHidden } from '@/components/@material-extend';
-
-// ----------------------------------------------------------------------
 
 const HeaderStyle = styled('header')(({ theme }) => ({
 	top: 0,
@@ -27,13 +22,14 @@ const HeaderStyle = styled('header')(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
 
-AuthLayout.propTypes = {
-	children: PropTypes.node
-};
 
-export default function AuthLayout({ children }) {
+interface Props{
+	children?
+}
+
+const  AuthLayout=(props:Props):JSX.Element=> {
+	const { children } = props;
 	return (
 		<HeaderStyle>
 			<RouterLink to="/">
@@ -52,4 +48,6 @@ export default function AuthLayout({ children }) {
 			</MHidden>
 		</HeaderStyle>
 	);
-}
+};
+
+export default AuthLayout;

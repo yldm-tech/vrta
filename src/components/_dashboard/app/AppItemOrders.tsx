@@ -1,20 +1,16 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import windowsFilled from '@iconify/icons-ant-design/windows-filled';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
-// utils
-import { fShortenNumber } from '../../../utils/formatNumber';
-
-// ----------------------------------------------------------------------
+import { fShortenNumber } from '@/utils/formatNumber';
 
 const RootStyle = styled(Card)(({ theme }) => ({
 	boxShadow: 'none',
 	textAlign: 'center',
 	padding: theme.spacing(5, 0),
-	color: theme.palette.warning.darker,
-	backgroundColor: theme.palette.warning.lighter
+	// color: theme.palette.warning.darker,
+	// backgroundColor: theme.palette.warning.lighter
 }));
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
@@ -33,11 +29,10 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 	)} 100%)`
 }));
 
-// ----------------------------------------------------------------------
 
 const TOTAL = 1723315;
 
-export default function AppItemOrders() {
+export default function AppItemOrders() :JSX.Element{
 	return (
 		<RootStyle>
 			<IconWrapperStyle>

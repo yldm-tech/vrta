@@ -1,5 +1,5 @@
 import faker from 'faker';
-import PropTypes from 'prop-types';
+
 import { noCase } from 'change-case';
 import React, { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
@@ -8,7 +8,6 @@ import { Icon } from '@iconify/react';
 import bellFill from '@iconify/icons-eva/bell-fill';
 import clockFill from '@iconify/icons-eva/clock-fill';
 import doneAllFill from '@iconify/icons-eva/done-all-fill';
-// material
 import { alpha } from '@material-ui/core/styles';
 import {
 	Box,
@@ -25,13 +24,9 @@ import {
 	ListItemAvatar,
 	ListItemButton
 } from '@material-ui/core';
-// utils
 import { mockImgAvatar } from '@/utils/mockImages';
-// components
 import Scrollbar from '@/components/Scrollbar';
 import MenuPopover from '@/components/MenuPopover';
-
-// ----------------------------------------------------------------------
 
 const NOTIFICATIONS = [
 	{
@@ -93,25 +88,25 @@ function renderContent(notification) {
 
 	if (notification.type === 'order_placed') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_package.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_package.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'order_shipped') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_shipping.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_shipping.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'mail') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_mail.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_mail.svg" />,
 			title
 		};
 	}
 	if (notification.type === 'chat_message') {
 		return {
-			avatar: <img alt={notification.title} src="/src/assets/static/icons/ic_notification_chat.svg" />,
+			avatar: <img alt={notification.title} src="/src/assets/images/icons/ic_notification_chat.svg" />,
 			title
 		};
 	}
@@ -121,11 +116,15 @@ function renderContent(notification) {
 	};
 }
 
-NotificationItem.propTypes = {
-	notification: PropTypes.object.isRequired
-};
 
-function NotificationItem({ notification }) {
+
+interface Props{
+	notification
+}
+
+
+const NotificationItem= (props:Props):JSX.Element =>{
+	const { notification } = props;
 	const { avatar, title } = renderContent(notification);
 
 	return (
@@ -164,9 +163,9 @@ function NotificationItem({ notification }) {
 			/>
 		</ListItemButton>
 	);
-}
+};
 
-export default function NotificationsPopover() {
+export default function NotificationsPopover() :JSX.Element{
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 	const [notifications, setNotifications] = useState(NOTIFICATIONS);

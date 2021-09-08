@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+
 import { Icon } from '@iconify/react';
 import { NavLink as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
-// material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
 import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@material-ui/core';
+import { NavItemConfig } from '@/models';
 
-// ----------------------------------------------------------------------
 
 const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props} />)(
 	({ theme }) => ({
@@ -42,14 +41,15 @@ const ListItemIconStyle = styled(ListItemIcon)({
 	justifyContent: 'center'
 });
 
-// ----------------------------------------------------------------------
 
-NavItem.propTypes = {
-	item: PropTypes.object,
-	active: PropTypes.func
-};
 
-function NavItem({ item, active }) {
+interface NavItemProps{
+	item: NavItemConfig,
+	active:(path:string)=>boolean
+}
+
+function NavItem(props:NavItemProps) {
+	const { item, active } = props;
 	const theme = useTheme();
 	const isActiveRoot = active(item.path);
 	const { title, path, icon, info, children } = item;
@@ -149,11 +149,14 @@ function NavItem({ item, active }) {
 	);
 }
 
-NavSection.propTypes = {
-	navConfig: PropTypes.array
-};
 
-export default function NavSection({ navConfig, ...other }) {
+interface Props{
+	navConfig: NavItemConfig[],
+	other?
+}
+
+export default function NavSection(props:Props):JSX.Element {
+	const { navConfig, ...other } = props;
 	const { pathname } = useLocation();
 	const match = (path) => (path ? !!matchPath({ path, end: false }, pathname) : false);
 

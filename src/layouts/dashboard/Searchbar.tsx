@@ -1,7 +1,6 @@
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 import searchFill from '@iconify/icons-eva/search-fill';
-// material
 import { styled, alpha } from '@material-ui/core/styles';
 import {
 	Box,
@@ -12,8 +11,6 @@ import {
 	ClickAwayListener,
 	IconButton
 } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
 
 const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;
@@ -40,7 +37,7 @@ const SearchbarStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function Searchbar() {
+export default function Searchbar():JSX.Element {
 	const [isOpen, setOpen] = useState(false);
 
 	const handleOpen = () => {

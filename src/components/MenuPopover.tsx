@@ -1,10 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// material
+
 import { Popover } from '@material-ui/core';
 import { alpha, styled } from '@material-ui/core/styles';
-
-// ----------------------------------------------------------------------
 
 const ArrowStyle = styled('span')(({ theme }) => ({
 	[theme.breakpoints.up('sm')]: {
@@ -23,17 +20,19 @@ const ArrowStyle = styled('span')(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
+interface Props{
+	children?,
+	sx?,
+	open?
+	onClose?
+	anchorEl?
+}
 
-MenuPopover.propTypes = {
-	children: PropTypes.node.isRequired,
-	sx: PropTypes.object
-};
-
-export default function MenuPopover({ children, sx, ...other }) {
+export default function MenuPopover( props:Props ) :JSX.Element{
+	const {open,children, ...other} = props;
 	return (
 		<Popover
-			open={false} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+			open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
 			transformOrigin={{ vertical: 'top', horizontal: 'right' }}
 			PaperProps={{
 				sx: {
@@ -43,7 +42,6 @@ export default function MenuPopover({ children, sx, ...other }) {
 					// boxShadow: (theme) => theme.customShadows.z20,
 					border: (theme) => `solid 1px ${theme.palette.grey[5008]}`,
 					width: 200,
-					...sx
 				}
 			}}
 			{...other}		>

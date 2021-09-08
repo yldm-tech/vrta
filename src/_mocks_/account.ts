@@ -1,9 +1,12 @@
 // ----------------------------------------------------------------------
 
-const account = {
+import { IAccount } from '@/models';
+
+const account:IAccount = {
 	displayName: 'Jaydon Frankie',
 	email: 'demo@minimals.cc',
-	photoURL: '/src/assets/static/mock-images/avatars/avatar_default.jpg'
+	photoURL: '/src/assets/images/mock-images/avatars/avatar_default.jpg',
+	role:'admin'
 };
 
 export default account;

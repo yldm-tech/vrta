@@ -1,17 +1,12 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-// material
 import { styled } from '@material-ui/core/styles';
 import { Box, Card, Link, Container, Typography } from '@material-ui/core';
-// layouts
 import AuthLayout from '../layouts/AuthLayout';
-// components
 import Page from '@/components/Page';
 import { MHidden } from '@/components/@material-extend';
 import { RegisterForm } from '@/components/authentication/register';
 import AuthSocial from '@/components/authentication/AuthSocial';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
@@ -40,9 +35,9 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function Register() {
+export default function Register() :JSX.Element{
 	return (
-		<RootStyle title="Register | Minimal-UI">
+		<RootStyle>
 			<AuthLayout>
         Already have an account? &nbsp;
 				<Link underline="none" variant="subtitle2" component={RouterLink} to="/login">
@@ -55,7 +50,7 @@ export default function Register() {
 					<Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Manage the job more effectively with Minimal
 					</Typography>
-					<img alt="register" src="/src/assets/static/illustrations/illustration_register.png" />
+					<img alt="register" src="/src/assets/images/illustrations/illustration_register.png" />
 				</SectionStyle>
 			</MHidden>
 

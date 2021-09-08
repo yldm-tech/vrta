@@ -9,7 +9,7 @@ import { Menu, MenuItem, IconButton, ListItemIcon, ListItemText } from '@materia
 
 // ----------------------------------------------------------------------
 
-export default function UserMoreMenu() {
+export default function UserMoreMenu():JSX.Element {
 	const ref = useRef(null);
 	const [isOpen, setIsOpen] = useState(false);
 

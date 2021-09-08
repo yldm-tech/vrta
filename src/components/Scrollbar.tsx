@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import SimpleBarReact from 'simplebar-react';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
 const RootStyle = styled('div')({
 	flexGrow: 1,
@@ -34,14 +32,15 @@ const SimpleBarStyle = styled(SimpleBarReact)(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
 
-Scrollbar.propTypes = {
-	children: PropTypes.node.isRequired,
-	sx: PropTypes.object
-};
+interface Props{
+	children?,
+	sx?,
+	other?
+}
 
-export default function Scrollbar({ children, sx, ...other }) {
+export default function Scrollbar(props:Props):JSX.Element {
+	const {children, sx,other} = props;
 	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 		navigator.userAgent
 	);

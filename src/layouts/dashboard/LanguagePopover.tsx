@@ -11,23 +11,23 @@ const LANGS = [
 	{
 		value: 'en',
 		label: 'English',
-		icon: '/src/assets/static/icons/ic_flag_en.svg'
+		icon: '/src/assets/images/icons/ic_flag_en.svg'
 	},
 	{
 		value: 'de',
 		label: 'German',
-		icon: '/src/assets/static/icons/ic_flag_de.svg'
+		icon: '/src/assets/images/icons/ic_flag_de.svg'
 	},
 	{
 		value: 'fr',
 		label: 'French',
-		icon: '/src/assets/static/icons/ic_flag_fr.svg'
+		icon: '/src/assets/images/icons/ic_flag_fr.svg'
 	}
 ];
 
 // ----------------------------------------------------------------------
 
-export default function LanguagePopover() {
+export default function LanguagePopover():JSX.Element {
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 

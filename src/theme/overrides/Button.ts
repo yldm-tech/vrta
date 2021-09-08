@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------
 
-export default function Button(theme) {
+import { Theme } from '@material-ui/core';
+
+export default function Button(theme:Theme) {
 	return {
 		MuiButton: {
 			styleOverrides: {

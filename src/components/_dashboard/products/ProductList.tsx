@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
-// material
 import { Grid } from '@material-ui/core';
 import ShopProductCard from '@/components/_dashboard/products/ProductCard';
 
-// ----------------------------------------------------------------------
 
-ProductList.propTypes = {
-	products: PropTypes.array.isRequired
-};
+interface Props{
+	products,
+	order
+}
 
-export default function ProductList({ products, ...other }) {
+export default function ProductList(props:Props):JSX.Element {
+	const { products, ...other } = props;
 	return (
 		<Grid container spacing={3} {...other}>
 			{products.map((product) => (

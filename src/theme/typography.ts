@@ -1,8 +1,6 @@
-// ----------------------------------------------------------------------
-
-function pxToRem(value) {
+export const pxToRem= (value:number):string =>{
 	return `${value / 16}rem`;
-}
+};
 
 function responsiveFontSizes({ sm, md, lg }) {
 	return {

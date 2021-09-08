@@ -1,7 +1,5 @@
-// material
 import React from 'react';
 import { Box, Grid, Container, Typography } from '@material-ui/core';
-// components
 import Page from '@/components/Page';
 import {
 	AppTasks,
@@ -18,9 +16,7 @@ import {
 	AppConversionRates
 } from '@/components/_dashboard/app';
 
-// ----------------------------------------------------------------------
-
-export default function DashboardApp() {
+export default function DashboardApp():JSX.Element {
 	return (
 		<Page title="Dashboard | Minimal-UI">
 			<Container maxWidth="xl">

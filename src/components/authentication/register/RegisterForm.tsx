@@ -11,7 +11,7 @@ import { LoadingButton } from '@material-ui/lab';
 
 // ----------------------------------------------------------------------
 
-export default function RegisterForm() {
+export default function RegisterForm():JSX.Element {
 	const navigate = useNavigate();
 	const [showPassword, setShowPassword] = useState(false);
 

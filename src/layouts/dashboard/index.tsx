@@ -1,6 +1,5 @@
 import React ,{ useState } from 'react';
 import { Outlet } from 'react-router-dom';
-// material
 import { styled } from '@material-ui/core/styles';
 //
 import DashboardNavbar from '@/layouts/dashboard/DashboardNavbar';

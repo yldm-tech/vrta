@@ -1,17 +1,13 @@
 import React from 'react';
 import faker from 'faker';
-import PropTypes from 'prop-types';
+
 import { Icon } from '@iconify/react';
 import googleFill from '@iconify/icons-eva/google-fill';
 import twitterFill from '@iconify/icons-eva/twitter-fill';
 import facebookFill from '@iconify/icons-eva/facebook-fill';
 import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-// material
 import { Box, Grid, Card, Paper, Typography, CardHeader, CardContent } from '@material-ui/core';
-// utils
-import { fShortenNumber } from '../../../utils/formatNumber';
-
-// ----------------------------------------------------------------------
+import { fShortenNumber } from '@/utils/formatNumber';
 
 const SOCIALS = [
 	{
@@ -36,13 +32,12 @@ const SOCIALS = [
 	}
 ];
 
-// ----------------------------------------------------------------------
+interface Props{
+	site
+}
 
-SiteItem.propTypes = {
-	site: PropTypes.object
-};
-
-function SiteItem({ site }) {
+function SiteItem(props:Props) {
+	const { site } = props;
 	const { icon, value, name } = site;
 
 	return (
@@ -58,7 +53,7 @@ function SiteItem({ site }) {
 	);
 }
 
-export default function AppTrafficBySite() {
+export const AppTrafficBySite = ():JSX.Element=> {
 	return (
 		<Card>
 			<CardHeader title="Traffic by Site" />
@@ -71,4 +66,6 @@ export default function AppTrafficBySite() {
 			</CardContent>
 		</Card>
 	);
-}
+};
+
+export default AppTrafficBySite;

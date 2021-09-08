@@ -1,7 +1,6 @@
 import React from 'react';
 import faker from 'faker';
-import PropTypes from 'prop-types';
-// material
+
 import { Card, Typography, CardHeader, CardContent } from '@material-ui/core';
 import {
 	Timeline,
@@ -11,10 +10,7 @@ import {
 	TimelineSeparator,
 	TimelineDot
 } from '@material-ui/lab';
-// utils
-import { fDateTime } from '../../../utils/formatTime';
-
-// ----------------------------------------------------------------------
+import { fDateTime } from '@/utils/formatTime';
 
 const TIMELINES = [
 	{
@@ -44,14 +40,15 @@ const TIMELINES = [
 	}
 ];
 
-// ----------------------------------------------------------------------
 
-OrderItem.propTypes = {
-	item: PropTypes.object,
-	isLast: PropTypes.bool
-};
 
-function OrderItem({ item, isLast }) {
+interface Props{
+	item,
+	isLast:boolean
+}
+
+function OrderItem(props:Props) {
+	const { item, isLast } = props;
 	const { type, title, time } = item;
 	return (
 		<TimelineItem>
@@ -78,7 +75,7 @@ function OrderItem({ item, isLast }) {
 	);
 }
 
-export default function AppOrderTimeline() {
+export default function AppOrderTimeline():JSX.Element {
 	return (
 		<Card
 			sx={{

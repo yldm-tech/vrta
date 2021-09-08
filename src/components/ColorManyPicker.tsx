@@ -1,16 +1,17 @@
-import PropTypes from 'prop-types';
+
+import React from 'react';
 import { Icon } from '@iconify/react';
 import checkmarkFill from '@iconify/icons-eva/checkmark-fill';
-// material
 import { Box, Checkbox } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
-IconColor.propTypes = {
-	sx: PropTypes.object
-};
+interface IconColorProps{
+	sx,
+	other?
+}
 
-function IconColor({ sx, ...other }) {
+function IconColor(props:IconColorProps) {
+	const { sx, ...other } = props;
 	return (
 		<Box
 			sx={{
@@ -35,13 +36,17 @@ function IconColor({ sx, ...other }) {
 	);
 }
 
-ColorManyPicker.propTypes = {
-	colors: PropTypes.array.isRequired,
-	onChecked: PropTypes.func,
-	sx: PropTypes.object
-};
+interface Props{
+	name?,
+	colors:string[],
+	onChecked:(color:string)=>boolean,
+	sx,
+	onChange?
+}
 
-export default function ColorManyPicker({ colors, onChecked, sx, ...other }) {
+
+export default function ColorManyPicker(props:Props):JSX.Element {
+	const { colors, onChecked, sx, ...other } = props;
 	return (
 		<Box sx={sx}>
 			{colors.map((color) => {

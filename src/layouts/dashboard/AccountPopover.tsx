@@ -4,15 +4,11 @@ import homeFill from '@iconify/icons-eva/home-fill';
 import personFill from '@iconify/icons-eva/person-fill';
 import settings2Fill from '@iconify/icons-eva/settings-2-fill';
 import { Link as RouterLink } from 'react-router-dom';
-// material
 import { alpha } from '@material-ui/core/styles';
 import { Button, Box, Divider, MenuItem, Typography, Avatar, IconButton } from '@material-ui/core';
-// components
 import MenuPopover from '@/components/MenuPopover';
-//
 import account from '@/_mocks_/account';
 
-// ----------------------------------------------------------------------
 
 const MENU_OPTIONS = [
 	{
@@ -32,9 +28,7 @@ const MENU_OPTIONS = [
 	}
 ];
 
-// ----------------------------------------------------------------------
-
-export default function AccountPopover() {
+const AccountPopover = ():JSX.Element =>{
 	const anchorRef = useRef(null);
 	const [open, setOpen] = useState(false);
 
@@ -117,4 +111,6 @@ export default function AccountPopover() {
 			</MenuPopover>
 		</>
 	);
-}
+};
+
+export default AccountPopover;

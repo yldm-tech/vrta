@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------
 
-export default function Lists(theme) {
+import { Theme } from '@material-ui/core';
+
+export default function Lists(theme:Theme) {
 	return {
 		MuiListItemIcon: {
 			styleOverrides: {

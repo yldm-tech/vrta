@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import { Box } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
-SvgIconStyle.propTypes = {
-	src: PropTypes.string.isRequired,
-	color: PropTypes.string,
-	sx: PropTypes.object
-};
+interface Props{
+	src: string,
+	color: string,
+	sx
+}
 
-export default function SvgIconStyle({ src, color = 'inherit', sx }) {
+export default function SvgIconStyle(props:Props) :JSX.Element{
+	const { src, color = 'inherit', sx } = props;
 	return (
 		<Box
 			component="span"

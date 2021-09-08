@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Box)({
 	display: 'flex',
@@ -21,14 +19,15 @@ const IconStyle = styled('div')(({ theme }) => ({
 	boxShadow: `inset -1px 1px 2px ${alpha(theme.palette.common.black, 0.24)}`
 }));
 
-// ----------------------------------------------------------------------
 
-ColorPreview.propTypes = {
-	colors: PropTypes.array.isRequired,
-	limit: PropTypes.number
-};
+interface Props{
+	colors:[],
+	limit:number
+}
 
-export default function ColorPreview({ colors, limit = 3, ...other }) {
+
+export const ColorPreview = (props:Props):JSX.Element =>{
+	const { colors, limit = 3, ...other } = props;
 	const showColor = colors.slice(0, limit);
 	const moreColor = colors.length - limit;
 
@@ -41,4 +40,6 @@ export default function ColorPreview({ colors, limit = 3, ...other }) {
 			{colors.length > limit && <Typography variant="subtitle2">{`+${moreColor}`}</Typography>}
 		</RootStyle>
 	);
-}
+};
+
+export default ColorPreview;

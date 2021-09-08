@@ -1,18 +1,14 @@
 import faker from 'faker';
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Icon } from '@iconify/react';
 import { formatDistance } from 'date-fns';
 import { Link as RouterLink } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
-// material
 import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@material-ui/core';
-// utils
-import { mockImgCover } from '../../../utils/mockImages';
-//
+import { mockImgCover } from '@/utils/mockImages';
 import Scrollbar from '../../Scrollbar';
-
-// ----------------------------------------------------------------------
+import { News } from '@/models';
 
 const NEWS = [...Array(5)].map((_, index) => {
 	const setIndex = index + 1;
@@ -24,13 +20,14 @@ const NEWS = [...Array(5)].map((_, index) => {
 	};
 });
 
-// ----------------------------------------------------------------------
 
-NewsItem.propTypes = {
-	news: PropTypes.object.isRequired
-};
 
-function NewsItem({ news }) {
+interface Props{
+	news:News
+}
+
+const NewsItem=(props:Props)=> {
+	const { news } = props;
 	const { image, title, description, postedAt } = news;
 
 	return (
@@ -56,9 +53,9 @@ function NewsItem({ news }) {
 			</Typography>
 		</Stack>
 	);
-}
+};
 
-export default function AppNewsUpdate() {
+const  AppNewsUpdate = ():JSX.Element=> {
 	return (
 		<Card>
 			<CardHeader title="News Update" />
@@ -86,4 +83,7 @@ export default function AppNewsUpdate() {
 			</Box>
 		</Card>
 	);
-}
+};
+
+
+export default AppNewsUpdate;

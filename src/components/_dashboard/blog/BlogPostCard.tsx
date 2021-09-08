@@ -1,18 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Icon } from '@iconify/react';
 import eyeFill from '@iconify/icons-eva/eye-fill';
-import { Link as RouterLink } from 'react-router-dom';
 import shareFill from '@iconify/icons-eva/share-fill';
 import messageCircleFill from '@iconify/icons-eva/message-circle-fill';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@material-ui/core';
-// utils
 import { fDate } from '@/utils/formatTime';
 import { fShortenNumber } from '@/utils/formatNumber';
-//
 import SvgIconStyle from '../../SvgIconStyle';
+import { IPost } from '@/models';
 
 // ----------------------------------------------------------------------
 
@@ -56,12 +53,13 @@ const CoverImgStyle = styled('img')({
 
 // ----------------------------------------------------------------------
 
-BlogPostCard.propTypes = {
-	post: PropTypes.object.isRequired,
-	index: PropTypes.number
-};
+interface Props{
+	post:IPost,
+	index:number
+}
 
-export default function BlogPostCard({ post, index }) {
+const  BlogPostCard = (props:Props):JSX.Element=> {
+	const { post, index } = props;
 	const { cover, title, view, comment, share, author, createdAt } = post;
 	const latestPostLarge = index === 0;
 	const latestPost = index === 1 || index === 2;
@@ -98,7 +96,7 @@ export default function BlogPostCard({ post, index }) {
 				>
 					<SvgIconStyle
 						color="paper"
-						src="/src/assets/static/icons/shape-avatar.svg"
+						src="/src/assets/images/icons/shape-avatar.svg"
 						sx={{
 							width: 80,
 							height: 36,
@@ -179,4 +177,6 @@ export default function BlogPostCard({ post, index }) {
 			</Card>
 		</Grid>
 	);
-}
+};
+
+export default BlogPostCard;

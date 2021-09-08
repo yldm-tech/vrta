@@ -1,8 +1,7 @@
 import faker from 'faker';
-// utils
-import { mockImgCover } from '../utils/mockImages';
+import { mockImgCover } from '@/utils/mockImages';
+import { IPost } from '@/models';
 
-// ----------------------------------------------------------------------
 
 const POST_TITLES = [
 	'Whiteboard Templates By Industry Leaders',
@@ -31,7 +30,7 @@ const POST_TITLES = [
 	'How to Animate a SVG with border-image'
 ];
 
-const posts = [...Array(23)].map((_, index) => ({
+const posts:IPost[] = [...Array(23)].map((_, index) => ({
 	id: faker.datatype.uuid(),
 	cover: mockImgCover(index + 1),
 	title: POST_TITLES[index + 1],
@@ -42,7 +41,7 @@ const posts = [...Array(23)].map((_, index) => ({
 	favorite: faker.datatype.number(),
 	author: {
 		name: faker.name.findName(),
-		avatarUrl: `/src/assets/static/mock-images/avatars/avatar_${index + 1}.jpg`
+		avatarUrl: `/src/assets/images/mock-images/avatars/avatar_${index + 1}.jpg`
 	}
 }));
 

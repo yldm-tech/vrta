@@ -5,7 +5,6 @@ import { useFormik, Form, FormikProvider } from 'formik';
 import { Icon } from '@iconify/react';
 import eyeFill from '@iconify/icons-eva/eye-fill';
 import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
-// material
 import {
 	Link,
 	Stack,
@@ -19,7 +18,7 @@ import { LoadingButton } from '@material-ui/lab';
 
 // ----------------------------------------------------------------------
 
-export default function LoginForm() {
+export default function LoginForm():JSX.Element {
 	const navigate = useNavigate();
 	const [showPassword, setShowPassword] = useState(false);
 

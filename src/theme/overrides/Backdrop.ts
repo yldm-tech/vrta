@@ -1,8 +1,9 @@
 import { alpha } from '@material-ui/core/styles';
+import { Theme } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
-export default function Backdrop(theme) {
+export default function Backdrop(theme:Theme) {
 	const varLow = alpha(theme.palette.grey[900], 0.48);
 	const varHigh = alpha(theme.palette.grey[900], 1);
 

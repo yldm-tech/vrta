@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 import chevronUpFill from '@iconify/icons-eva/chevron-up-fill';
 import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
-// material
 import { Menu, Button, MenuItem, Typography } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -14,7 +13,7 @@ const SORT_BY_OPTIONS = [
 	{ value: 'priceAsc', label: 'Price: Low-High' }
 ];
 
-export default function ShopProductSort() {
+export default function ShopProductSort():JSX.Element {
 	const [open, setOpen] = useState(null);
 
 	const handleOpen = (event) => {

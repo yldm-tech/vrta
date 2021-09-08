@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------
 
-export default function Autocomplete(theme) {
+import { Theme } from '@material-ui/core';
+
+export default function Autocomplete(theme:Theme) {
 	return {
 		MuiAutocomplete: {
 			styleOverrides: {

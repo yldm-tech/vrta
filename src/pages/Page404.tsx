@@ -20,7 +20,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function Page404() {
+export default function Page404():JSX.Element {
 	return (
 		<RootStyle>
 			<Container>
@@ -39,7 +39,7 @@ export default function Page404() {
 						<motion.div variants={varBounceIn}>
 							<Box
 								component="img"
-								src="/src/assets/static/illustrations/illustration_404.svg"
+								src="/src/assets/images/illustrations/illustration_404.svg"
 								sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
 							/>
 						</motion.div>

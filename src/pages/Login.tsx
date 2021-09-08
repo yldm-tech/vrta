@@ -1,11 +1,8 @@
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
-// material
 import { styled } from '@material-ui/core/styles';
 import { Card, Stack, Link, Container, Typography } from '@material-ui/core';
-// layouts
 import AuthLayout from '../layouts/AuthLayout';
-// components
 import Page from '@/components/Page';
 import { MHidden } from '@/components/@material-extend';
 import { LoginForm } from '@/components/authentication/login';
@@ -38,9 +35,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
 	padding: theme.spacing(12, 0)
 }));
 
-// ----------------------------------------------------------------------
 
-export default function Login() {
+export default function Login():JSX.Element {
 	return (
 		<RootStyle>
 			<AuthLayout>
@@ -55,7 +51,7 @@ export default function Login() {
 					<Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Hi, Welcome Back
 					</Typography>
-					<img src="/src/assets/static/illustrations/illustration_login.png" alt="login" />
+					<img src="/src/assets/images/illustrations/illustration_login.png" alt="login" />
 				</SectionStyle>
 			</MHidden>
 

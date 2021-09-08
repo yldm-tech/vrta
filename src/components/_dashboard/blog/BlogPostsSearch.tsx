@@ -1,12 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Icon } from '@iconify/react';
 import searchFill from '@iconify/icons-eva/search-fill';
-// material
 import { styled } from '@material-ui/core/styles';
 import { Box, TextField, Autocomplete, InputAdornment } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { IPost } from '@/models';
 
 const RootStyle = styled('div')(({ theme }) => ({
 	'& .MuiAutocomplete-root': {
@@ -18,7 +15,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 		'&.Mui-focused': {
 			width: 240,
 			'& .MuiAutocomplete-inputRoot': {
-				boxShadow: theme.customShadows.z12
+				// boxShadow: theme.customShadows.z12
 			}
 		}
 	},
@@ -35,20 +32,19 @@ const RootStyle = styled('div')(({ theme }) => ({
 	}
 }));
 
-// ----------------------------------------------------------------------
 
-BlogPostsSearch.propTypes = {
-	posts: PropTypes.array.isRequired
-};
+interface Props{
+  posts:IPost[]
+}
 
-export default function BlogPostsSearch({ posts }) {
+export const BlogPostsSearch = ( props:Props ):JSX.Element=> {
 	return (
 		<RootStyle>
 			<Autocomplete
 				size="small"
 				disablePortal
 				popupIcon={null}
-				options={posts}
+				options={props.posts}
 				getOptionLabel={(post) => post.title}
 				renderInput={(params) => (
 					<TextField
@@ -79,4 +75,6 @@ export default function BlogPostsSearch({ posts }) {
 			/>
 		</RootStyle>
 	);
-}
+};
+
+export default BlogPostsSearch;

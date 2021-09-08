@@ -1,23 +1,28 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 // material
 import { MenuItem, TextField } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
+interface Menu{
+	value:string,
+	label:string;
+}
 
-BlogPostsSort.propTypes = {
-	options: PropTypes.array,
-	onSort: PropTypes.func
-};
+interface Props  {
+	options: Menu[]
+	onSort?: ()=>void
+}
 
-export default function BlogPostsSort({ options, onSort }) {
+export const BlogPostsSort = (props: Props):JSX.Element=>{
 	return (
-		<TextField select size="small" value="latest" onChange={onSort}>
-			{options.map((option) => (
+		<TextField select size="small" value="latest" onChange={props.onSort}>
+			{props.options.map((option) => (
 				<MenuItem key={option.value} value={option.value}>
 					{option.label}
 				</MenuItem>
 			))}
 		</TextField>
 	);
-}
+};
+
+
+export default BlogPostsSort;

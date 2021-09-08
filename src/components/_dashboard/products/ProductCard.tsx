@@ -1,16 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Link as RouterLink } from 'react-router-dom';
-// material
 import { Box, Card, Link, Typography, Stack } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-// utils
 import { fCurrency } from '@/utils/formatNumber';
-//
 import Label from '../../Label';
 import ColorPreview from '../../ColorPreview';
-
-// ----------------------------------------------------------------------
+import { IProduct } from '@/models';
 
 const ProductImgStyle = styled('img')({
 	top: 0,
@@ -20,14 +16,13 @@ const ProductImgStyle = styled('img')({
 	position: 'absolute'
 });
 
-// ----------------------------------------------------------------------
 
-ShopProductCard.propTypes = {
-	product: PropTypes.object
-};
+interface Props{
+	product:IProduct,
+}
 
-export default function ShopProductCard({ product }) {
-	const { name, cover, price, colors, status, priceSale } = product;
+export const ShopProductCard = (props:Props):JSX.Element=> {
+	const { name, cover, price, colors, status, priceSale } = props.product;
 
 	return (
 		<Card>
@@ -77,4 +72,6 @@ export default function ShopProductCard({ product }) {
 			</Stack>
 		</Card>
 	);
-}
+};
+
+export default ShopProductCard;

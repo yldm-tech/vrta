@@ -1,19 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Icon } from '@iconify/react';
 import menu2Fill from '@iconify/icons-eva/menu-2-fill';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Box, Stack, AppBar, Toolbar, IconButton } from '@material-ui/core';
-// components
 import { MHidden } from '@/components/@material-extend';
-//
 import Searchbar from './Searchbar';
 import AccountPopover from './AccountPopover';
 import LanguagePopover from './LanguagePopover';
 import NotificationsPopover from './NotificationsPopover';
 
-// ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 280;
 const APPBAR_MOBILE = 64;
@@ -39,11 +35,12 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-DashboardNavbar.propTypes = {
-	onOpenSidebar: PropTypes.func
-};
+interface Props{
+	onOpenSidebar,
+}
 
-export default function DashboardNavbar({ onOpenSidebar }) {
+export default function DashboardNavbar(props:Props):JSX.Element {
+	const { onOpenSidebar } = props;
 	return (
 		<RootStyle>
 			<ToolbarStyle>

@@ -6,8 +6,6 @@ import {
 	varBounceOutRight
 } from './BounceOut';
 
-// ----------------------------------------------------------------------
-
 const TRANSITION_ENTER = {
 	duration: 0.72,
 	ease: [0.43, 0.13, 0.23, 0.96]

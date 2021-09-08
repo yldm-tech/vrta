@@ -1,12 +1,9 @@
 import React from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
-// material
 import { Card, CardHeader, Box } from '@material-ui/core';
-//
 import { BaseOptionChart } from '../../charts';
-
-// ----------------------------------------------------------------------
+import { ApexOptions } from 'apexcharts';
 
 const CHART_DATA = [
 	{
@@ -26,8 +23,8 @@ const CHART_DATA = [
 	}
 ];
 
-export default function AppWebsiteVisits() {
-	const chartOptions = merge(BaseOptionChart(), {
+export const AppWebsiteVisits = ():JSX.Element=> {
+	const chartOptions :ApexOptions = merge(BaseOptionChart(), {
 		stroke: { width: [0, 2, 3] },
 		plotOptions: { bar: { columnWidth: '11%', borderRadius: 4 } },
 		fill: { type: ['solid', 'gradient', 'solid'] },
@@ -67,4 +64,6 @@ export default function AppWebsiteVisits() {
 			</Box>
 		</Card>
 	);
-}
+};
+
+export default AppWebsiteVisits;

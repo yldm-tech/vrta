@@ -1,11 +1,9 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import appleFilled from '@iconify/icons-ant-design/apple-filled';
-// material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
-// utils
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fShortenNumber } from '@/utils/formatNumber';
 
 // ----------------------------------------------------------------------
 
@@ -13,8 +11,8 @@ const RootStyle = styled(Card)(({ theme }) => ({
 	boxShadow: 'none',
 	textAlign: 'center',
 	padding: theme.spacing(5, 0),
-	color: theme.palette.info.darker,
-	backgroundColor: theme.palette.info.lighter
+	// color: theme.palette.info.darker,
+	// backgroundColor: theme.palette.info.lighter
 }));
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
@@ -33,11 +31,10 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 	)} 100%)`
 }));
 
-// ----------------------------------------------------------------------
 
 const TOTAL = 1352831;
 
-export default function AppNewUsers() {
+export default function AppNewUsers():JSX.Element {
 	return (
 		<RootStyle>
 			<IconWrapperStyle>

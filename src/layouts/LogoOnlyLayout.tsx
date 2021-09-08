@@ -1,11 +1,7 @@
 import { Link as RouterLink, Outlet } from 'react-router-dom';
 import React from 'react';
-// material
 import { styled } from '@material-ui/core/styles';
-// components
 import Logo from '@/components/Logo';
-
-// ----------------------------------------------------------------------
 
 const HeaderStyle = styled('header')(({ theme }) => ({
 	top: 0,
@@ -21,7 +17,7 @@ const HeaderStyle = styled('header')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function LogoOnlyLayout() {
+export default function LogoOnlyLayout() :JSX.Element{
 	return (
 		<>
 			<HeaderStyle>

@@ -1,30 +1,30 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
-// material
 import { visuallyHidden } from '@material-ui/utils';
 import { Box, Checkbox, TableRow, TableCell, TableHead, TableSortLabel } from '@material-ui/core';
 
-// ----------------------------------------------------------------------
 
-UserListHead.propTypes = {
-	order: PropTypes.oneOf(['asc', 'desc']),
-	orderBy: PropTypes.string,
-	rowCount: PropTypes.number,
-	headLabel: PropTypes.array,
-	numSelected: PropTypes.number,
-	onRequestSort: PropTypes.func,
-	onSelectAllClick: PropTypes.func
-};
 
-export default function UserListHead({
-	order,
-	orderBy,
-	rowCount,
-	headLabel,
-	numSelected,
+interface Props{
+	order: 'asc'| 'desc',
+	orderBy:string,
+	rowCount:number,
+	headLabel:[],
+	numSelected:number,
 	onRequestSort,
 	onSelectAllClick
-}) {
+}
+
+const UserListHead = (props:Props):JSX.Element =>{
+	const {
+		order,
+		orderBy,
+		rowCount,
+		headLabel,
+		numSelected,
+		onRequestSort,
+		onSelectAllClick
+	} = props;
 	const createSortHandler = (property) => (event) => {
 		onRequestSort(event, property);
 	};
@@ -63,4 +63,6 @@ export default function UserListHead({
 			</TableRow>
 		</TableHead>
 	);
-}
+};
+
+export default UserListHead;
