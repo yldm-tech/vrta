@@ -1,5 +1,5 @@
 import { IAccount } from '@/models';
-import Avatar from '@/assets/images/mock-images/avatars/avatar_default.jpg';
+import Avatar from '@/assets/images/avatar_default.png';
 
 const account: IAccount = {
     displayName: 'Jaydon Frankie',
