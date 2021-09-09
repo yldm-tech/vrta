@@ -4,6 +4,7 @@
   "licence": "MIT",
   "version": "1.0.0",
   "private": false,
+  "homepage": "https://reactZone.github.io/vite-react-ts-admin",
   "scripts": {
     "dev": "cross-env NODE_ENV=local vite --host",
     "dev:stg": "cross-env NODE_ENV=stg vite",
@@ -11,6 +12,7 @@
     "build": "vite build",
     "build:stg": "cross-env vite build --mode test",
     "build:prod": "cross-env vite build --mode production",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx .",
     "fix": "yarn lint --fix"
   },
@@ -75,6 +77,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2",
     "typescript": "^4.4.2",
     "vite": "^2.5.6"
