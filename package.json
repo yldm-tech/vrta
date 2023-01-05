@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=local vite --host",
     "dev:stg": "cross-env NODE_ENV=stg vite",
     "serve": "vite preview --host",
-    "build": "vite build",
+    "build": "vite build --mode prod",
     "build:stg": "cross-env vite build --mode test",
     "build:prod": "cross-env vite build --mode production",
     "deploy": "gh-pages -d dist",
