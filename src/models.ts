@@ -16,7 +16,7 @@ export interface IPost {
     comment: number;
     share: number;
     favorite: number;
-    createdAt: string;
+    createdAt: Date;
     author: {
         name: string;
         avatarUrl: string;
