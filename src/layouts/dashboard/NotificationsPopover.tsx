@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import { noCase } from 'change-case';
 import React, { useRef, useState } from 'react';
@@ -45,7 +45,7 @@ const NOTIFICATIONS = [
     },
     {
         id: faker.datatype.uuid(),
-        title: faker.name.findName(),
+        title: faker.name.fullName(),
         description: 'answered to your comment on the Minimal',
         avatar: mockImgAvatar(2),
         type: 'friend_interactive',

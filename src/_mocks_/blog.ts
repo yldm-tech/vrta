@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { mockImgCover } from '@/utils/mockImages';
 import { IPost } from '@/models';
 
@@ -40,7 +40,7 @@ const posts: IPost[] = [...Array(23)].map((_, index) => ({
     share: faker.datatype.number(),
     favorite: faker.datatype.number(),
     author: {
-        name: faker.name.findName(),
+        name: faker.name.fullName(),
         avatarUrl: `${baseUrl}/avatar/avatar_${index + 1}.jpg`
     }
 }));

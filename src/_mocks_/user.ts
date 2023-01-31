@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { sample } from 'lodash';
 import { mockImgAvatar } from '@/utils/mockImages';
 import { IUser } from '@/models';
@@ -6,8 +6,8 @@ import { IUser } from '@/models';
 const users: IUser[] = [...Array(24)].map((_, index) => ({
     id: faker.datatype.uuid() as string,
     avatarUrl: mockImgAvatar(index + 1),
-    name: faker.name.findName() as string,
-    company: faker.company.companyName() as string,
+    name: faker.name.fullName() as string,
+    company: faker.company.name() as string,
     isVerified: faker.datatype.boolean() as boolean,
     status: sample(['active', 'banned']),
     role: sample([

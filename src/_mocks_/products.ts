@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { sample } from 'lodash';
 import { mockImgProduct } from '@/utils/mockImages';
 import { IProduct } from '@/models';

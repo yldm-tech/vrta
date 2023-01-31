@@ -1,4 +1,4 @@
-import { Navigate, useRoutes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import React, { ReactElement } from 'react';
 import DashboardLayout from '@/layouts/dashboard';
 import LogoOnlyLayout from '@/layouts/LogoOnlyLayout';
@@ -11,32 +11,23 @@ import User from '@/pages/User';
 import NotFound from '@/pages/Page404';
 
 export const Router = (): ReactElement => {
-    return useRoutes([
-        {
-            path: '/dashboard',
-            element: <DashboardLayout />,
-            children: [
-                { path: '/', element: <Navigate to="/dashboard/app" replace /> },
-                { path: 'app', element: <DashboardApp /> },
-                { path: 'user', element: <User /> },
-                { path: 'products', element: <Products /> },
-                { path: 'blog', element: <Blog /> }
-            ]
-        },
-        {
-            path: '/',
-            element: <LogoOnlyLayout />,
-            children: [
-                { path: 'login', element: <Login /> },
-                { path: 'register', element: <Register /> },
-                { path: '404', element: <NotFound /> },
-                { path: '/', element: <Navigate to="/dashboard" /> },
-                { path: '*', element: <Navigate to="/404" /> }
-            ]
-        },
 
-        { path: '*', element: <Navigate to="/404" replace /> }
-    ]) as ReactElement;
+    return <Routes>
+        <Route path="/dashboard" element={<DashboardLayout />} >
+            <Route path="" element={<Navigate to="/dashboard/app" replace />} />
+            <Route path="app" element={<DashboardApp />} />
+            <Route path="user" element={<User />} />
+            <Route path="products" element={<Products />} />
+            <Route path="blog" element={<Blog />} />
+        </Route>
+        <Route path="/" element={<LogoOnlyLayout />} >
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="404" element={<NotFound />} />
+            <Route path="" element={<Navigate to="/dashboard" />} />
+            <Route path="*" element={<Navigate to="/404" />} />
+        </Route>
+    </Routes>;
 };
 
 export default Router;

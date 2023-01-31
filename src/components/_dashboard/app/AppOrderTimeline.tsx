@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import { Card, Typography, CardHeader, CardContent } from '@material-ui/core';
 import {

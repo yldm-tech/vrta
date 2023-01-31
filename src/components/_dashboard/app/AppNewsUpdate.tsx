@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import React from 'react';
 import { Icon } from '@iconify/react';
 import { formatDistance } from 'date-fns';
@@ -12,7 +12,7 @@ import { News } from '@/models';
 const NEWS = [...Array(5)].map((_, index) => {
     const setIndex = index + 1;
     return {
-        title: faker.name.title(),
+        title: faker.name.jobTitle(),
         description: faker.lorem.paragraphs(),
         image: mockImgCover(setIndex),
         postedAt: faker.date.soon()
