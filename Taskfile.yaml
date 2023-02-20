@@ -1,0 +1,36 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - echo {{.CLI_ARGS}}
+    silent: true
+  
+  init:
+    cmds:
+      -  npm install -g conventional-changelog-cli
+      -  npm install -g standard-version
+      -  npm install -g commitizen
+      -  cp envs/.env.local .env
+      -  yarn install
+
+  changelog:
+    cmds:
+      - conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+
+  release:
+    cmds:
+      - git fetch
+      - yarn release
+      - task changelog
+      - git add .
+      - git cz
+
+  commit:
+      cmds:
+          - git add .
+          - git cz
+          - git push
+

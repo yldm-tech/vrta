@@ -1,37 +1,25 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true
-    },
-    extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended'
-    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaFeatures: {
-            jsx: true
-        },
-        ecmaVersion: 12,
+        project: ['tsconfig.json'],
+        tsconfigRootDir: __dirname,
         sourceType: 'module'
     },
-    settings: {
-        react: {
-            version: 'detect'
-        }
+    plugins: ['@typescript-eslint/eslint-plugin'],
+    extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+    root: true,
+    env: {
+        node: true,
+        jest: true
     },
-    globals: {
-        window: true,
-        module: true
-    },
-    plugins: ['react', '@typescript-eslint'],
+
+    ignorePatterns: ['.eslintrc.js', '*.ejs', '*.js', 'vite.config.ts'],
     rules: {
-        indent: ['off', 2],
-        'no-tabs': 0,
-        'linebreak-style': ['error', 'unix'],
-        quotes: ['error', 'single'],
-        semi: ['error', 'always'],
-        'no-mixed-spaces-and-tabs': 0
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/interface-name-prefix': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off'
     }
 };
