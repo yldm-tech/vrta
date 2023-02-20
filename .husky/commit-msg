@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
+echo "Checking branch name..."
+if [[ $(git symbolic-ref --short HEAD) =~ ^(feature|bugfix|hotfix|temp)\/.*$ ]]; then
+  exit 0
+else
+  echo "Invalid branch name. Only feature/* and bugfix/* branches are allowed."
+  exit 1
+fi
+
+yarn lint --fix
+yarn build
+
