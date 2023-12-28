@@ -1,5 +1,5 @@
-import { alpha } from '@material-ui/core/styles';
-import { Theme } from '@material-ui/core';
+import { alpha } from '@mui/material/styles';
+import { Theme } from '@mui/material';
 
 const Backdrop = (theme: Theme) => {
     const varLow = alpha(theme.palette.grey[900], 0.48);

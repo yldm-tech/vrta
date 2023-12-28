@@ -1,5 +1,5 @@
 import React from 'react';
-import { alpha, styled } from '@material-ui/core/styles';
+import { alpha, styled } from '@mui/material/styles';
 
 const RootStyle = styled('span')(({ theme, styleProps }) => {
     const { color, variant } = styleProps;

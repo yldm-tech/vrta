@@ -1,4 +1,4 @@
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@mui/styles';
 
 const GlobalStyles = withStyles((theme) => ({
     '@global': {
@@ -29,12 +29,12 @@ const GlobalStyles = withStyles((theme) => ({
             }
         },
         textarea: {
-            '&::-webkit-input-placeholder': { color: theme.palette.text.disabled },
-            '&::-moz-placeholder': { opacity: 1, color: theme.palette.text.disabled },
-            '&:-ms-input-placeholder': { color: theme.palette.text.disabled },
-            '&::placeholder': { color: theme.palette.text.disabled }
+            '&::-webkit-input-placeholder': { color: theme?.palette?.text?.disabled },
+            '&::-moz-placeholder': { opacity: 1, color: theme?.palette?.text?.disabled },
+            '&:-ms-input-placeholder': { color: theme?.palette?.text?.disabled },
+            '&::placeholder': { color: theme?.palette?.text?.disabled }
         },
-        a: { color: theme.palette.primary.main },
+        a: { color: theme.palette?.primary?.main },
         img: { display: 'block', maxWidth: '100%' }
     }
 }))(() => null);

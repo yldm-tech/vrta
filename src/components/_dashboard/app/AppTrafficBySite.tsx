@@ -5,7 +5,7 @@ import googleFill from '@iconify/icons-eva/google-fill';
 import twitterFill from '@iconify/icons-eva/twitter-fill';
 import facebookFill from '@iconify/icons-eva/facebook-fill';
 import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import { Box, Grid, Card, Paper, Typography, CardHeader, CardContent } from '@material-ui/core';
+import { Box, Grid, Card, Paper, Typography, CardHeader, CardContent } from '@mui/material';
 import { fShortenNumber } from '@/utils/formatNumber';
 
 const SOCIALS = [

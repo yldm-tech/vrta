@@ -1,4 +1,4 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 
 const Input = (theme: ThemeOptions): any => {
     return {

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import react  from '@vitejs/plugin-react';
 import * as path from 'path';
 import { existsSync } from 'fs';
 import * as dotenv from 'dotenv';
@@ -11,7 +11,7 @@ dotenv.config({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [reactRefresh()],
+    plugins: [react()],
     resolve: {
         alias: {
             '@@': path.resolve(__dirname),

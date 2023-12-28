@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import React, { useState } from 'react';
-import { Container, Stack, Typography } from '@material-ui/core';
+import { Container, Stack, Typography } from '@mui/material';
 import Page from '@/components/Page';
 import {
     ProductSort,

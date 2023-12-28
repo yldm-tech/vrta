@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import { varWrapEnter } from '@/components/animate/variants';
 
 interface Props {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { visuallyHidden } from '@material-ui/utils';
-import { Box, Checkbox, TableRow, TableCell, TableHead, TableSortLabel } from '@material-ui/core';
+import { visuallyHidden } from '@mui/utils';
+import { Box, Checkbox, TableRow, TableCell, TableHead, TableSortLabel } from '@mui/material';
 import { HeaderLabel } from '@/models';
 
 interface Props {

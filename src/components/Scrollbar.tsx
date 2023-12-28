@@ -1,7 +1,7 @@
 import React from 'react';
 import SimpleBarReact from 'simplebar-react';
-import { alpha, styled } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import { alpha, styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
 
 const RootStyle = styled('div')({
     flexGrow: 1,

@@ -3,8 +3,8 @@ import { Icon } from '@iconify/react';
 import { NavLink as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@material-ui/core';
+import { alpha, useTheme, styled } from '@mui/material/styles';
+import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import { NavItemConfig } from '@/models';
 
 const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props} />)(

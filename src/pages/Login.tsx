@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
-import { styled } from '@material-ui/core/styles';
-import { Card, Stack, Link, Container, Typography } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Card, Stack, Link, Container, Typography } from '@mui/material';
 import AuthLayout from '../layouts/AuthLayout';
 import Page from '@/components/Page';
 import { MHidden } from '@/components/@material-extend';

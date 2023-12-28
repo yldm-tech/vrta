@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 import chevronUpFill from '@iconify/icons-eva/chevron-up-fill';
 import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
-import { Menu, Button, MenuItem, Typography } from '@material-ui/core';
+import { Menu, Button, MenuItem, Typography } from '@mui/material';
 
 const SORT_BY_OPTIONS = [
     { value: 'featured', label: 'Featured' },

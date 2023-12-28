@@ -1,8 +1,8 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import shoppingCartFill from '@iconify/icons-eva/shopping-cart-fill';
-import { styled } from '@material-ui/core/styles';
-import { Badge } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Badge } from '@mui/material';
 
 const RootStyle = styled('div')(({ theme }) => ({
     zIndex: 999,

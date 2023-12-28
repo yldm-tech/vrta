@@ -1,6 +1,6 @@
 import React from 'react';
-import { Popover } from '@material-ui/core';
-import { alpha, styled } from '@material-ui/core/styles';
+import { Popover } from '@mui/material';
+import { alpha, styled } from '@mui/material/styles';
 
 const ArrowStyle = styled('span')(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
