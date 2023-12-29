@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import { formatDistance } from 'date-fns';
 import { Link as RouterLink } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
-import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@material-ui/core';
+import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@mui/material';
 import { mockImgCover } from '@/utils/mockImages';
 import Scrollbar from '../../Scrollbar';
 import { News } from '@/models';

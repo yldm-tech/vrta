@@ -18,7 +18,7 @@ import {
     Typography,
     RadioGroup,
     FormControlLabel
-} from '@material-ui/core';
+} from '@mui/material';
 import Scrollbar from '../../Scrollbar';
 import ColorManyPicker from '../../ColorManyPicker';
 

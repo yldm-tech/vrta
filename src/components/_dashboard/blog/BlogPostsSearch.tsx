@@ -1,8 +1,8 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import searchFill from '@iconify/icons-eva/search-fill';
-import { styled } from '@material-ui/core/styles';
-import { Box, TextField, Autocomplete, InputAdornment } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Box, TextField, Autocomplete, InputAdornment } from '@mui/material';
 import { IPost } from '@/models';
 
 const RootStyle = styled('div')(({ theme }) => ({

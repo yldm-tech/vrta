@@ -5,8 +5,8 @@ import { useFormik, Form, FormikProvider } from 'formik';
 import eyeFill from '@iconify/icons-eva/eye-fill';
 import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
 import { useNavigate } from 'react-router-dom';
-import { Stack, TextField, IconButton, InputAdornment } from '@material-ui/core';
-import { LoadingButton } from '@material-ui/lab';
+import { Stack, TextField, IconButton, InputAdornment } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
 
 const RegisterForm = (): JSX.Element => {
     const navigate = useNavigate();

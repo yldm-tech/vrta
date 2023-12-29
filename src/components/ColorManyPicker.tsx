@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import checkmarkFill from '@iconify/icons-eva/checkmark-fill';
-import { Box, Checkbox } from '@material-ui/core';
+import { Box, Checkbox } from '@mui/material';
 
 interface IconColorProps {
     sx?;

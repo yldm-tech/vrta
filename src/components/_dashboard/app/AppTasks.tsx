@@ -8,7 +8,7 @@ import {
     Typography,
     FormControlLabel,
     Stack
-} from '@material-ui/core';
+} from '@mui/material';
 
 const TASKS = [
     'Create FireStone Logo',

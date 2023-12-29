@@ -1,6 +1,6 @@
 import React from 'react';
-import { alpha, styled } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
+import { alpha, styled } from '@mui/material/styles';
+import { Box, Typography } from '@mui/material';
 
 const RootStyle = styled(Box)({
     display: 'flex',

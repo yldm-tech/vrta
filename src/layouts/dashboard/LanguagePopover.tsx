@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { alpha } from '@material-ui/core/styles';
-import { Box, MenuItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core';
+import { alpha } from '@mui/material/styles';
+import { Box, MenuItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import MenuPopover from '@/components/MenuPopover';
 
 import flagEn from '@/assets/images/icons/ic_flag_en.svg';

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import React, { forwardRef } from 'react';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 
 interface Props {
     children?;

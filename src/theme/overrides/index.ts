@@ -9,7 +9,7 @@ import Backdrop from '@/theme/overrides/Backdrop';
 import Typography from '@/theme/overrides/Typography';
 import IconButton from '@/theme/overrides/IconButton';
 import Autocomplete from '@/theme/overrides/Autocomplete';
-import { Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
 
 const ComponentsOverrides = (theme: Theme) => {
     return merge(

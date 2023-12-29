@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 import searchFill from '@iconify/icons-eva/search-fill';
-import { styled, alpha } from '@material-ui/core/styles';
+import { styled, alpha } from '@mui/material/styles';
 import {
     Box,
     Input,
@@ -10,7 +10,7 @@ import {
     InputAdornment,
     ClickAwayListener,
     IconButton
-} from '@material-ui/core';
+} from '@mui/material';
 
 const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;

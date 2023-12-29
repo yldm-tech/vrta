@@ -1,8 +1,8 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import bugFilled from '@iconify/icons-ant-design/bug-filled';
-import { alpha, styled } from '@material-ui/core/styles';
-import { Card, Typography } from '@material-ui/core';
+import { alpha, styled } from '@mui/material/styles';
+import { Card, Typography } from '@mui/material';
 import { fShortenNumber } from '@/utils/formatNumber';
 
 const RootStyle = styled(Card)(({ theme }) => ({
